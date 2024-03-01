@@ -4,10 +4,595 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <title>Geekfolio</title>
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="bg-[#F1F3F5] overflow-x-hidden">
+    <!-- Body mobile -->
+    <section class="w-full h-fit">
+      <div class="absolute font-epilogue inset-0 h-fit bg-zinc-100 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:50px_50px] lg:bg-[size:80px_80px] xl:bg-[size:50px_50px] lg:pb-52 xl:pb-0">
+        <div class="mt-40">
+          <div class="px-4 sm:px-10 md:mx-11 md:px-4 lg:pr-0 lg:mr-0">
+            <div class="flex justify-between">
+              <h1 class="text-4xl md:text-6xl xl:text-[85px] font-bold mb-2 leading-snug md:leading-normal tracking-wider md:max-w-[690px] xl:max-w-[960px] xl:pl-10 xl:pr-16">HIGH END
+                <span class="text-stroke">CREATIVE</span>
+                AGENCY
+              </h1>
+              <div class="w-fit h-fit xl:pr-40">
+                <div class="lg:w-[210px] lg:h-[210px] lg:relative lg:block lg:mr-10 hidden">
+                  <a href="#" class="w-full h-full">
+                    <div class="text-3xl animate-rotate">
+                      <svg class="textcircle" viewBox="0 0 500 500">
+                        <defs>
+                            <path id="textcircle" d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z">
+                            </path>
+                        </defs>
+                        <text>
+                            <textPath xlink:href="#textcircle" textLength="900">EXPLORE MORE
+                                -
+                                EXPLORE MORE -</textPath>
+                        </text>
+                      </svg>
+                    </div>
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                      <svg width="40px" height="40px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path fill="#000000" d="M768 256H353.6a32 32 0 1 1 0-64H800a32 32 0 0 1 32 32v448a32 32 0 0 1-64 0V256z"/><path fill="#000000" d="M777.344 201.344a32 32 0 0 1 45.312 45.312l-544 544a32 32 0 0 1-45.312-45.312l544-544z"/></svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="mt-8">
+              <div class="lg:flex block">
+                <div class="lg:pl-10 lg:max-w-[268px] xl:max-w-[510px] xl:ml-[130px] xl:px-[15px]">
+                  <div class="text">
+                    <p class="text-base font-light text-gray-500 xl:leading-loose">Through our years of experience, we've also learned that while each
+                      channel has its own set of advantages.</p>
+                  </div>
+                  <div class="mt-8 w-full h-[50px]">
+                    <a href="https://www.youtube.com/watch?v=AzwC6umvd1s&feature=youtu.be" class="relative flex w-[120px] h-full border border-[#1D1D1D] rounded-full pl-4 pr-10 items-center justify-center cursor-pointer">
+                      <span class="text-base font-light text-gray-500 bg-transparent mr-1">WATCH</span>
+                      <span class="w-11 h-11 rounded-full bg-yellow-500 absolute right-0.5 flex items-center justify-center">
+                        <svg width="15px" height="30px" viewBox="-3 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+      
+                          <title>play</title>
+                          <desc>Created with Sketch Beta.</desc>
+                          <defs>
+                      
+                      </defs>
+                          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                              <g id="Icon-Set-Filled" sketch:type="MSLayerGroup" transform="translate(-419.000000, -571.000000)" fill="#000000">
+                                  <path d="M440.415,583.554 L421.418,571.311 C420.291,570.704 419,570.767 419,572.946 L419,597.054 C419,599.046 420.385,599.36 421.418,598.689 L440.415,586.446 C441.197,585.647 441.197,584.353 440.415,583.554" id="play" sketch:type="MSShapeGroup">
+                      
+                      </path>
+                              </g>
+                          </g>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+                <div class="mt-28 lg:mt-10 lg:ml-10 xl:m-0">
+                  <img src="/images/14.jpg" alt="1" class="object-cover w-[400px] h-[400px] sm:w-full xl:min-w-[916px]">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <section class="mt-[1100px] lg:mt-[1200px] pb-[120px] font-epilogue">
+      <div class="">
+        <div class="mb-20 px-3 sm:px-9 md:px-14 lg:px-9 xl:px-28">
+          <div class="px-0.5">
+            <div>
+              <h6 class="mb-4 w-[152px] h-[36px] border border-[#1D1D1D] rounded-full text-xs flex items-center justify-center">OUR BENEFITS</h6>
+              <div class="block lg:flex lg:justify-between xl:grid xl:grid-cols-2">
+                <h2>
+                  <span class="text-[28px] md:text-4xl lg:text-[45px] lg:max-w-[370px] md:leading-snug font-semibold text-[#1D1D1D]">Our Team of Dedicated Digital Professionals.</span>
+                </h2>
+                <div class="px-0.5 lg:px-0">
+                  <div class="lg:ml-40 xl:ml-20 lg:relative">
+                    <p class="leading-[50px] sm:leading-10 lg:leading-7 mt-2">
+                      <span class="text-[#696969] text-base font-light inline-block leading-7">Through our years of experience, we’ve also learned that while</span>
+                      <span class="text-[#696969] text-base font-light inline-block leading-7">each channel has its own set of advantages, they all work best</span>
+                      <span class="text-[#696969] text-base font-light inline-block leading-7">when strategically paired with other channels.</span>
+                    </p>
+                    <div class="sm:mt-8">
+                      <a href="blog-classic.html" class="w-[50px] h-[50px] bg-gray-200 rounded-full text-[#1D1D1D] text-sm font-light flex items-center">
+                        <span class="absolute left-9 sm:left-14 md:left-20 lg:left-6 flex items-center">View All Our News
+                          <span>
+                            <svg width="18px" height="18px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path fill="#1D1D1D" d="M768 256H353.6a32 32 0 1 1 0-64H800a32 32 0 0 1 32 32v448a32 32 0 0 1-64 0V256z"/><path fill="#1D1D1D" d="M777.344 201.344a32 32 0 0 1 45.312 45.312l-544 544a32 32 0 0 1-45.312-45.312l544-544z"/></svg>
+                          </span>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full sm:px-6 md:px-14 xl:px-28 lg:flex lg:items-center lg:justify-between xl:grid xl:grid-cols-2">
+          <div class="img mb-10 ">
+            <div class="relative lg:w-[480px]">
+              <img src="/images/01.jpg" alt="" class="w-[273px] h-[328px] sm:w-[504px] sm:h-[605px] lg:w-[336px] lg:h-[403px] xl:w-[462px] xl:h-[554px]">
+              <div class="absolute w-[156px] h-[186px] sm:w-[288px] sm:h-[344px] lg:w-[192px] lg:h-[229px] xl:w-[264px] xl:h-[316px] bg-white -bottom-10 right-0 lg:-right-4 xl:-right-44">
+                <img src="/images/1.jpg" alt="" class="w-[150px] h-[180px] sm:w-[282px] sm:h-[338px] lg:w-[186px] lg:h-[223px] xl:w-[258px] xl:h-[310px] object-cover absolute bottom-0 right-0">
+              </div>
+            </div>
+          </div>
+          <div class="text lg:max-w-[400px] xl:max-w-[550px]">
+            <div>
+              <h2 class="text-[28px] lg:text-[45px] md:text-[35px] font-semibold text-[#1D1D1D]">Unlock Revenue Growth for Your Business.</h2>
+              <div class="flex justify-center flex-col pl-8 pr-8 mt-20 sm:pl-[56px] sm:pr-[0px]">
+                <div class="flex items-center justify-center mb-12">
+                  <img src="/images/0.png" alt="" class="w-[50px] h-[50px] mr-8">
+                  <div class="flex flex-col">
+                    <h6 class="text-base md:text-[20px] font-semibold text-[#1D1D1D] sm:mb-3">High Standerd</h6>
+                    <p class="text-[15px] text-[#696969] font-light sm:leading-7">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-center">
+                  <img src="/images/1.png" alt="" class="w-[50px] h-[50px] mr-8">
+                  <div class="flex flex-col">
+                    <h6 class="text-base md:text-[20px] font-semibold text-[#1D1D1D] sm:mb-3">Ease of Communication</h6>
+                    <p class="text-[15px] text-[#696969] font-light sm:leading-7">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- scroll section later-->
+    <section class="py-[50px] max-h-[165px] border-y bg-inherit border-gray-300 overflow-hidden font-epilogue -rotate-2 relative z-20">
+      <div class="flex max-h-[58px] md:max-h-[70px] items-center [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+        <div class="flex flex-nowrap items-center justify-between animate-infinitescroll">
+          <div class="flex items-center justify-center px-[30px] text-nowrap">
+            <h4 class="text-[40px] md:text-[70px] font-semibold">UI-UX Experience</h4>
+            <span class="text-[50px] font-bold text-stroke ml-[50px] mt-6">*</span>
+          </div>
+          <div class="flex items-center justify-center px-[30px] text-nowrap">
+            <h4 class="text-[40px] md:text-[70px] font-semibold">Web Development</h4>
+            <span class="text-[50px] font-bold text-stroke ml-[50px] mt-6">*</span>
+          </div>
+          <div class="flex items-center justify-center px-[30px] text-nowrap">
+            <h4 class="text-[40px] md:text-[70px] font-semibold">Digital Marketing</h4>
+            <span class="text-[50px] font-bold text-stroke ml-[50px] mt-6">*</span>
+          </div>
+          <div class="flex items-center justify-center px-[30px] text-nowrap">
+            <h4 class="text-[40px] md:text-[70px] font-semibold">Product Design</h4>
+            <span class="text-[50px] font-bold text-stroke ml-[50px] mt-6">*</span>
+          </div>
+          <div class="flex items-center justify-center px-[30px] text-nowrap">
+            <h4 class="text-[40px] md:text-[70px] font-semibold">Mobile Solutions</h4>
+            <span class="text-[50px] font-bold text-stroke ml-[50px] mt-6">*</span>
+          </div>
+        </div>
+        <div class="flex flex-nowrap items-center justify-between animate-infinitescroll">
+          <div class="flex items-center justify-center px-[30px] text-nowrap">
+            <h4 class="text-[40px] md:text-[70px] font-semibold">UI-UX Experience</h4>
+            <span class="text-[50px] font-bold text-stroke ml-[50px] mt-6">*</span>
+          </div>
+          <div class="flex items-center justify-center px-[30px] text-nowrap">
+            <h4 class="text-[40px] md:text-[70px] font-semibold">Web Development</h4>
+            <span class="text-[50px] font-bold text-stroke ml-[50px] mt-6">*</span>
+          </div>
+          <div class="flex items-center justify-center px-[30px] text-nowrap">
+            <h4 class="text-[40px] md:text-[70px] font-semibold">Digital Marketing</h4>
+            <span class="text-[50px] font-bold text-stroke ml-[50px] mt-6">*</span>
+          </div>
+          <div class="flex items-center justify-center px-[30px] text-nowrap">
+            <h4 class="text-[40px] md:text-[70px] font-semibold">Product Design</h4>
+            <span class="text-[50px] font-bold text-stroke ml-[50px] mt-6">*</span>
+          </div>
+          <div class="flex items-center justify-center px-[30px] text-nowrap">
+            <h4 class="text-[40px] md:text-[70px] font-semibold">Mobile Solutions</h4>
+            <span class="text-[50px] font-bold text-stroke ml-[50px] mt-6">*</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="w-full h-fit py-[60px] border-y border-gray-400 flex items-center justify-around">
+      <div>
+        <a href="#">
+          <img src="/images/01.png" alt="1" class="w-[100px] h-[28px]">
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="/images/02.png" alt="2" class="w-[100px] h-[28px]">
+        </a>
+      </div>
+      <div class="hidden sm:block">
+        <a href="#">
+          <img src="/images/03.png" alt="3" class="w-[100px] h-[28px]">
+        </a>
+      </div>
+      <div class="hidden lg:block">
+        <a href="#">
+          <img src="/images/04.png" alt="4" class="w-[100px] h-[28px]">
+        </a>
+      </div>
+      <div class="hidden lg:block">
+        <a href="#">
+          <img src="/images/05.png" alt="5" class="w-[100px] h-[28px]">
+        </a>
+      </div>
+    </div>
+    <section class="pt-32 font-epilogue">
+      <div class="px-3 sm:px-9 md:px-14">
+        <div class="mb-20 lg:flex lg:justify-between">
+          <div class="px-[3px] sm:px-0">
+              <h6 class="px-[30px] py-[7px] border rounded-full border-[#1D1D1D] w-[190px] h-[38px] text-xs text-[#1D1D1D] flex items-center justify-center mb-4 cursor-pointer">FEATURED SERVICES</h6>
+              <h2 class="text-[28px] md:text-[35px] lg:text-[45px] text-[#1D1D1D] font-semibold">Our Services</h2>
+          </div>
+          <div class="px-[3px] lg:max-w-[320px]">
+            <p class="text-base text-[#696969] font-light">Nemo enim ipsam voluptatem quia voluptas sit odit aut fugit, sed quia.</p>
+          </div>
+        </div>
+        <div class="px-[3px] lg:flex lg:justify-between lg:gap-5">
+          <div class="px-[30px] py-[50px] mb-[50px] md:p-[60px] border border-gray-300 rounded-sm">
+            <div class="img mb-10">
+              <img src="/images/0.png" alt="1" class="w-[50px] h-[50px]">
+            </div>
+            <span class="mb-2.5 text-sm text-[#1D1D1D] inline-block">Product Design</span>
+            <h6 class="mb-4 text-base font-medium lg:text-xl text-[#1D1D1D]">Digital Product Design</h6>
+            <p class="text-sm text-[#696969] font-light">Creating a higher spacing and how people move through a unique.</p>
+            <div class="w-full">
+              <a href="#" class="py-[15px] pl-[30px] mt-8 border border-gray-300 rounded-full w-[268px] h-[50px] text-xs text-[#1D1D1D] flex items-center cursor-pointer relative sm:w-full">
+                READ MORE
+                <span class="absolute z-10 w-[50px] h-[50px] rounded-full border border-gray-300 flex items-center justify-center right-0">
+                  <svg width="18px" height="18px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path fill="#000000" d="M768 256H353.6a32 32 0 1 1 0-64H800a32 32 0 0 1 32 32v448a32 32 0 0 1-64 0V256z"/><path fill="#000000" d="M777.344 201.344a32 32 0 0 1 45.312 45.312l-544 544a32 32 0 0 1-45.312-45.312l544-544z"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="px-[30px] py-[50px] mb-[50px] md:p-[60px] border border-gray-300 rounded-sm">
+            <div class="img mb-10">
+              <img src="/images/1.png" alt="1" class="w-[50px] h-[50px]">
+            </div>
+            <span class="mb-2.5 text-sm text-[#1D1D1D] inline-block">Customs Services</span>
+            <h6 class="mb-4 text-base font-medium lg:text-xl text-[#1D1D1D]">Branding & Design</h6>
+            <p class="text-sm text-[#696969] font-light">Creating a higher spacing and how people move through a unique.</p>
+            <div class="w-full">
+              <a href="#" class="py-[15px] pl-[30px] mt-8 border border-gray-300 rounded-full w-[268px] h-[50px] text-xs text-[#1D1D1D] flex items-center cursor-pointer relative sm:w-full">
+                READ MORE
+                <span class="absolute z-10 w-[50px] h-[50px] rounded-full border border-gray-300 flex items-center justify-center right-0">
+                  <svg width="18px" height="18px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path fill="#000000" d="M768 256H353.6a32 32 0 1 1 0-64H800a32 32 0 0 1 32 32v448a32 32 0 0 1-64 0V256z"/><path fill="#000000" d="M777.344 201.344a32 32 0 0 1 45.312 45.312l-544 544a32 32 0 0 1-45.312-45.312l544-544z"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="px-[30px] py-[50px] mb-[50px] md:p-[60px] border border-gray-300 rounded-sm">
+            <div class="img mb-10">
+              <img src="/images/2.png" alt="1" class="w-[50px] h-[50px]">
+            </div>
+            <span class="mb-2.5 text-sm text-[#1D1D1D] inline-block">Product Development</span>
+            <h6 class="mb-4 text-base font-medium lg:text-xl text-[#1D1D1D]">Web Development</h6>
+            <p class="text-sm text-[#696969] font-light">Creating a higher spacing and how people move through a unique.</p>
+            <div class="w-full">
+              <a href="#" class="py-[15px] pl-[30px] mt-8 border border-gray-300 rounded-full w-[268px] h-[50px] text-xs text-[#1D1D1D] flex items-center cursor-pointer relative sm:w-full">
+                READ MORE
+                <span class="absolute z-10 w-[50px] h-[50px] rounded-full border border-gray-300 flex items-center justify-center right-0">
+                  <svg width="18px" height="18px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path fill="#000000" d="M768 256H353.6a32 32 0 1 1 0-64H800a32 32 0 0 1 32 32v448a32 32 0 0 1-64 0V256z"/><path fill="#000000" d="M777.344 201.344a32 32 0 0 1 45.312 45.312l-544 544a32 32 0 0 1-45.312-45.312l544-544z"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Scroll section image -->
+    <section class="py-32 font-epilogue">
+        <div class="px-3 sm:px-9 md:px-14 xl:px-[115px]">
+          <!-- infinity roll -->
+          <div class="max-h-[165px] py-10 border-y bg-inherit border-gray-300 overflow-hidden mb-20">
+            <div class="flex max-h-[58px] items-center px-[15px]">
+              <div class="flex flex-nowrap items-center justify-between animate-infinitescroll">
+                <div class="flex items-center justify-center px-[30px] text-nowrap">
+                  <h4 class="text-[40px] font-semibold sm:text-[70px] text-stroke">Amazing Design</h4>
+                  <span class="text-[50px] font-bold text-stroke ml-[50px] mt-6 sm:text-[70px] sm:mt-9">*</span>
+                </div>
+                <div class="flex items-center justify-center px-[30px] text-nowrap">
+                  <h4 class="text-[40px] font-semibold sm:text-[70px]">Amazing Design</h4>
+                  <span class="text-[50px] font-bold text-stroke ml-[50px] mt-6 sm:text-[70px] sm:mt-9">*</span>
+                </div>
+                <div class="flex items-center justify-center px-[30px] text-nowrap">
+                  <h4 class="text-[40px] font-semibold sm:text-[70px] text-stroke">Amazing Design</h4>
+                  <span class="text-[50px] font-bold text-stroke ml-[50px] mt-6 sm:text-[70px] sm:mt-9">*</span>
+                </div>
+                <div class="flex items-center justify-center px-[30px] text-nowrap">
+                  <h4 class="text-[40px] font-semibold sm:text-[70px]">Amazing Design</h4>
+                  <span class="text-[50px] font-bold text-stroke ml-[50px] mt-6 sm:text-[70px] sm:mt-9">*</span>
+                </div>
+                <div class="flex items-center justify-center px-[30px] text-nowrap">
+                  <h4 class="text-[40px] font-semibold sm:text-[70px] text-stroke">Amazing Design</h4>
+                  <span class="text-[50px] font-bold text-stroke ml-[50px] mt-6 sm:text-[70px] sm:mt-9">*</span>
+                </div>
+              </div>
+              <div class="flex flex-nowrap items-center justify-between animate-infinitescroll">
+                <div class="flex items-center justify-center px-[30px] text-nowrap">
+                  <h4 class="text-[40px] font-semibold sm:text-[70px]">Amazing Design</h4>
+                  <span class="text-[50px] font-bold text-stroke ml-[50px] mt-6 sm:text-[70px] sm:mt-9">*</span>
+                </div>
+                <div class="flex items-center justify-center px-[30px] text-nowrap">
+                  <h4 class="text-[40px] font-semibold sm:text-[70px] text-stroke">Amazing Design</h4>
+                  <span class="text-[50px] font-bold text-stroke ml-[50px] mt-6 sm:text-[70px] sm:mt-9">*</span>
+                </div>
+                <div class="flex items-center justify-center px-[30px] text-nowrap">
+                  <h4 class="text-[40px] font-semibold sm:text-[70px]">Amazing Design</h4>
+                  <span class="text-[50px] font-bold text-stroke ml-[50px] mt-6 sm:text-[70px] sm:mt-9">*</span>
+                </div>
+                <div class="flex items-center justify-center px-[30px] text-nowrap">
+                  <h4 class="text-[40px] font-semibold sm:text-[70px] text-stroke">Amazing Design</h4>
+                  <span class="text-[50px] font-bold text-stroke ml-[50px] mt-6 sm:text-[70px] sm:mt-9">*</span>
+                </div>
+                <div class="flex items-center justify-center px-[30px] text-nowrap">
+                  <h4 class="text-[40px] font-semibold sm:text-[70px]">Amazing Design</h4>
+                  <span class="text-[50px] font-bold text-stroke ml-[50px] mt-6 sm:text-[70px] sm:mt-9">*</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:flex lg:justify-between xl:grid xl:grid-cols-2">
+            <div class="px-[3px] sm:px-0 lg:max-w-[400px] xl:max-w-[520px]">
+              <div>
+                <div class="mb-20">
+                  <h6 class="px-[30px] py-[7px] border rounded-full border-[#1D1D1D] w-[122px] h-[37px] text-xs text-[#1D1D1D] flex items-center justify-center mb-4 cursor-pointer">SERVICES</h6>
+                  <p class="text-base text-[#696969] ">We help you to go online and increase your conversion rate Better design for your digital products. </p>
+                </div>
+                <div class="mb-[50px]">
+                  <ul>
+                    <li class="flex items-center pb-[15px] mb-[15px] border-b border-gray-300 text-[#1D1D1D] text-[40px] font-medium">
+                      <span class="mr-[30px] text-xl">01</span>
+                      UI/UX Design
+                    </li>
+                    <li class="flex items-center pb-[15px] mb-[15px] border-b border-gray-300 text-[#1D1D1D] text-[40px] font-medium">
+                      <span class="mr-[30px] text-xl">02</span>
+                      Branding
+                    </li>
+                    <li class="flex items-center pb-[15px] mb-[15px] border-b border-gray-300 text-[#1D1D1D] text-[40px] font-medium">
+                      <span class="mr-[30px] text-xl">03</span>
+                      Development
+                    </li>
+                    <li class="flex items-center pb-[15px] mb-[15px] border-b border-gray-300 text-[#1D1D1D] text-[40px] font-medium">
+                      <span class="mr-[30px] text-xl">04</span>
+                      Marketing
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="relative md:flex md:justify-end">
+                <div class="img">
+                  <img src="/images/img3.jpg" alt="3" class="w-[360px] h-[540px] md:w-[483px] lg:w-[315px] xl:w-[440px] object-cover">
+                </div>
+                <div class="px-[30px] py-10 xl:px-10 xl:py-[60px] bg-white h-[375px] w-[343px] md:w-[483px] md:h-[357px] lg:w-[315px] lg:h-[443px] xl:w-[440px] xl:h-[386px] absolute -bottom-0.5 left-0 lg:-left-32 xl:left-0">
+                    <div class="mb-10">
+                      <img src="/images/0.png" alt="0" class="w-[60px] h-[60px]">
+                    </div>
+                    <div>
+                      <p class="text-base text-[#696969] font-light">We are a creative studio specializing in design, development and strategy many different skills and disciplines in the production of all web.</p>
+                    </div>
+                    <a href="#" class="mt-[30px] text-sm text-[#1D1D1D] flex items-center">Read More
+                      <svg class="ml-5" fill="#1D1D1D" height="13px" width="13px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                      viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                      <polygon points="512,261.5 298.7,90.8 298.7,218.8 0,218.8 0,304.2 298.7,304.2 298.7,432.2 "/>
+                    </svg>
+                    </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="bg-white pl-2.5 h-fit font-epilogue py-[120px]">
+      <div class="px-3 sm:px-8 md:px-12 lg:px-9 xl:px-28">
+        <div>
+          <div class="px-[3px]">
+            <div class="mb-20">
+              <div class="flex flex-col items-center justify-center">
+                <h6 class="px-[30px] py-[7px] border rounded-full border-[#1D1D1D] w-[152px] h-[37px] text-xs text-[#1D1D1D] font-medium flex items-center justify-center mb-4 cursor-pointer">TESTIMONIALS</h6>
+                <h2 class="text-[#1D1D1D] text-[28px] md:text-[35px] lg:text-[45px] font-semibold">What People Says?</h2>
+              </div>
+            </div>
+            <div class="lg:flex lg:justify-between">
+              <div class="w-[130px] h-[130px] lg:w-[300px] lg:h-[300px] rounded-full border border-[#1D1D1D] flex items-center justify-center mb-[30px] relative">
+                <div class="w-[100px] h-[100px] lg:w-[140px] lg:h-[140px] bg-gray-100 rounded-full flex items-center justify-center absolute z-20">
+                  <img src="/images/quote.png" alt="q" class="w-[50px] h-[50px]">
+                </div>
+                <div class="lg:block hidden lg:w-[300px] lg:h-[300px] lg:rounded-full absolute z-10 left-20">
+                  <img src="/images/sq1.jpg" alt="1" class="w-[300px] h-[300px] rounded-full object-cover">
+                </div>
+              </div>
+              <div class="swiper mySwiper w-full h-full lg:max-w-[610px] xl:max-w-[740px]">
+                <div class="swiper-wrapper flex flex-nowrap">
+                  <div class="min-w-full swiper-slide lg:pl-20">
+                    <div class="mb-5">
+                      <span class="flex">
+                        <svg class="ml-1" width="20px" height="20px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#FFAC33" d="M27.287 34.627c-.404 0-.806-.124-1.152-.371L18 28.422l-8.135 5.834a1.97 1.97 0 0 1-2.312-.008a1.971 1.971 0 0 1-.721-2.194l3.034-9.792l-8.062-5.681a1.98 1.98 0 0 1-.708-2.203a1.978 1.978 0 0 1 1.866-1.363L12.947 13l3.179-9.549a1.976 1.976 0 0 1 3.749 0L23 13l10.036.015a1.975 1.975 0 0 1 1.159 3.566l-8.062 5.681l3.034 9.792a1.97 1.97 0 0 1-.72 2.194a1.957 1.957 0 0 1-1.16.379z"></path></svg>
+                        <svg class="ml-1" width="20px" height="20px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#FFAC33" d="M27.287 34.627c-.404 0-.806-.124-1.152-.371L18 28.422l-8.135 5.834a1.97 1.97 0 0 1-2.312-.008a1.971 1.971 0 0 1-.721-2.194l3.034-9.792l-8.062-5.681a1.98 1.98 0 0 1-.708-2.203a1.978 1.978 0 0 1 1.866-1.363L12.947 13l3.179-9.549a1.976 1.976 0 0 1 3.749 0L23 13l10.036.015a1.975 1.975 0 0 1 1.159 3.566l-8.062 5.681l3.034 9.792a1.97 1.97 0 0 1-.72 2.194a1.957 1.957 0 0 1-1.16.379z"></path></svg>
+                        <svg class="ml-1" width="20px" height="20px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#FFAC33" d="M27.287 34.627c-.404 0-.806-.124-1.152-.371L18 28.422l-8.135 5.834a1.97 1.97 0 0 1-2.312-.008a1.971 1.971 0 0 1-.721-2.194l3.034-9.792l-8.062-5.681a1.98 1.98 0 0 1-.708-2.203a1.978 1.978 0 0 1 1.866-1.363L12.947 13l3.179-9.549a1.976 1.976 0 0 1 3.749 0L23 13l10.036.015a1.975 1.975 0 0 1 1.159 3.566l-8.062 5.681l3.034 9.792a1.97 1.97 0 0 1-.72 2.194a1.957 1.957 0 0 1-1.16.379z"></path></svg>
+                        <svg class="ml-1" width="20px" height="20px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#FFAC33" d="M27.287 34.627c-.404 0-.806-.124-1.152-.371L18 28.422l-8.135 5.834a1.97 1.97 0 0 1-2.312-.008a1.971 1.971 0 0 1-.721-2.194l3.034-9.792l-8.062-5.681a1.98 1.98 0 0 1-.708-2.203a1.978 1.978 0 0 1 1.866-1.363L12.947 13l3.179-9.549a1.976 1.976 0 0 1 3.749 0L23 13l10.036.015a1.975 1.975 0 0 1 1.159 3.566l-8.062 5.681l3.034 9.792a1.97 1.97 0 0 1-.72 2.194a1.957 1.957 0 0 1-1.16.379z"></path></svg>
+                        <svg class="ml-1" width="20px" height="20px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#FFAC33" d="M27.287 34.627c-.404 0-.806-.124-1.152-.371L18 28.422l-8.135 5.834a1.97 1.97 0 0 1-2.312-.008a1.971 1.971 0 0 1-.721-2.194l3.034-9.792l-8.062-5.681a1.98 1.98 0 0 1-.708-2.203a1.978 1.978 0 0 1 1.866-1.363L12.947 13l3.179-9.549a1.976 1.976 0 0 1 3.749 0L23 13l10.036.015a1.975 1.975 0 0 1 1.159 3.566l-8.062 5.681l3.034 9.792a1.97 1.97 0 0 1-.72 2.194a1.957 1.957 0 0 1-1.16.379z"></path></svg>
+                      </span>
+                    </div>
+                    <div class="mb-10">
+                      <h5 class="text-[18px] md:text-2xl font-normal text-[#1D1D1D] leading-7">I have been hiring people in this and I have never seen this level of space for a number of years professionalism. It really feels like you are working with a team that can get the job done.</h5>
+                    </div>
+                    <div class="">
+                      <div class="flex items-center">
+                        <div>
+                          <img src="/images/ceo.jpg" alt="1" class="w-[60px] h-[60px] rounded-full object-cover">
+                        </div>
+                        <div class="ml-[30px] flex flex-col">
+                          <h6 class="mb-2 text-base text-[#1D1D1D] font-semibold">Leonard Heiser</h6>
+                          <span class="text-sm text-[#1D1D1D] font-normal">CEO</span>
+                        </div>
+                      </div> 
+                    </div>
+                  </div>
+                  <div class="min-w-full swiper-slide lg:pl-20">
+                    <div class="mb-5">
+                      <span class="flex">
+                        <svg class="ml-1" width="20px" height="20px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#FFAC33" d="M27.287 34.627c-.404 0-.806-.124-1.152-.371L18 28.422l-8.135 5.834a1.97 1.97 0 0 1-2.312-.008a1.971 1.971 0 0 1-.721-2.194l3.034-9.792l-8.062-5.681a1.98 1.98 0 0 1-.708-2.203a1.978 1.978 0 0 1 1.866-1.363L12.947 13l3.179-9.549a1.976 1.976 0 0 1 3.749 0L23 13l10.036.015a1.975 1.975 0 0 1 1.159 3.566l-8.062 5.681l3.034 9.792a1.97 1.97 0 0 1-.72 2.194a1.957 1.957 0 0 1-1.16.379z"></path></svg>
+                        <svg class="ml-1" width="20px" height="20px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#FFAC33" d="M27.287 34.627c-.404 0-.806-.124-1.152-.371L18 28.422l-8.135 5.834a1.97 1.97 0 0 1-2.312-.008a1.971 1.971 0 0 1-.721-2.194l3.034-9.792l-8.062-5.681a1.98 1.98 0 0 1-.708-2.203a1.978 1.978 0 0 1 1.866-1.363L12.947 13l3.179-9.549a1.976 1.976 0 0 1 3.749 0L23 13l10.036.015a1.975 1.975 0 0 1 1.159 3.566l-8.062 5.681l3.034 9.792a1.97 1.97 0 0 1-.72 2.194a1.957 1.957 0 0 1-1.16.379z"></path></svg>
+                        <svg class="ml-1" width="20px" height="20px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#FFAC33" d="M27.287 34.627c-.404 0-.806-.124-1.152-.371L18 28.422l-8.135 5.834a1.97 1.97 0 0 1-2.312-.008a1.971 1.971 0 0 1-.721-2.194l3.034-9.792l-8.062-5.681a1.98 1.98 0 0 1-.708-2.203a1.978 1.978 0 0 1 1.866-1.363L12.947 13l3.179-9.549a1.976 1.976 0 0 1 3.749 0L23 13l10.036.015a1.975 1.975 0 0 1 1.159 3.566l-8.062 5.681l3.034 9.792a1.97 1.97 0 0 1-.72 2.194a1.957 1.957 0 0 1-1.16.379z"></path></svg>
+                        <svg class="ml-1" width="20px" height="20px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#FFAC33" d="M27.287 34.627c-.404 0-.806-.124-1.152-.371L18 28.422l-8.135 5.834a1.97 1.97 0 0 1-2.312-.008a1.971 1.971 0 0 1-.721-2.194l3.034-9.792l-8.062-5.681a1.98 1.98 0 0 1-.708-2.203a1.978 1.978 0 0 1 1.866-1.363L12.947 13l3.179-9.549a1.976 1.976 0 0 1 3.749 0L23 13l10.036.015a1.975 1.975 0 0 1 1.159 3.566l-8.062 5.681l3.034 9.792a1.97 1.97 0 0 1-.72 2.194a1.957 1.957 0 0 1-1.16.379z"></path></svg>
+                        <svg class="ml-1" width="20px" height="20px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#FFAC33" d="M27.287 34.627c-.404 0-.806-.124-1.152-.371L18 28.422l-8.135 5.834a1.97 1.97 0 0 1-2.312-.008a1.971 1.971 0 0 1-.721-2.194l3.034-9.792l-8.062-5.681a1.98 1.98 0 0 1-.708-2.203a1.978 1.978 0 0 1 1.866-1.363L12.947 13l3.179-9.549a1.976 1.976 0 0 1 3.749 0L23 13l10.036.015a1.975 1.975 0 0 1 1.159 3.566l-8.062 5.681l3.034 9.792a1.97 1.97 0 0 1-.72 2.194a1.957 1.957 0 0 1-1.16.379z"></path></svg>
+                      </span>
+                    </div>
+                    <div class="mb-10">
+                      <h5 class="text-[18px] md:text-2xl font-normal text-[#1D1D1D] leading-7">I have been hiring people in this and I have never seen this level of space for a number of years professionalism. It really feels like you are working with a team that can get the job done.</h5>
+                    </div>
+                    <div class="">
+                      <div class="flex items-center">
+                        <div>
+                          <img src="/images/ceo2.jpg" alt="1" class="w-[60px] h-[60px] rounded-full object-cover">
+                        </div>
+                        <div class="ml-[30px] flex flex-col">
+                          <h6 class="mb-2 text-base text-[#1D1D1D] font-semibold">Leonard Heiser</h6>
+                          <span class="text-sm text-[#1D1D1D] font-normal">CEO</span>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <!-- button -->
+                <div class="flex items-center justify-end">
+                  <div class="w-[50px] h-[50px] rounded-full border border-gray-400 flex items-center justify-center cursor-pointer button-next">
+                    <svg class="w-5 h-5" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                      viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+                    <line fill="none" stroke="#1D1D1D" stroke-width="2" stroke-miterlimit="10" x1="6" y1="16" x2="28" y2="16"/>
+                    <polyline fill="none" stroke="#1D1D1D" stroke-width="2" stroke-miterlimit="10" points="14,24.5 5.5,16 14,7.5 "/>
+                    </svg>
+                  </div>
+                  <div class="w-[50px] h-[50px] rounded-full border border-gray-400 flex items-center justify-center cursor-pointer ml-5 button-prev">
+                    <svg class="w-5 h-5" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                    viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+                    <line fill="none" stroke="#1D1D1D" stroke-width="2" stroke-miterlimit="10" x1="26" y1="16" x2="4" y2="16"/>
+                    <polyline fill="none" stroke="#1D1D1D" stroke-width="2" stroke-miterlimit="10" points="18,7.5 26.5,16 18,24.5 "/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-20 pt-20 border-t border-gray-200 sm:grid sm:grid-cols-2 lg:grid lg:grid-cols-4">
+          <div class="px-[3px] text-[#1D1D1D]">
+            <div class="mb-[50px]">
+              <h2 class="text-[90px] md:text-[120px] font-extrabold text-stroke mb-2">16</h2>
+              <h6 class="mb-2 text-base text-[#1D1D1D] font-medium">Years of Experience</h6>
+            </div>
+          </div>
+          <div class="px-[3px] text-[#1D1D1D]">
+            <div class="mb-[50px]">
+              <h2 class="text-[90px] md:text-[120px] font-extrabold mb-2 flex items-center">4
+                <span class="text-[80px] font-semibold md:mt-5">k</span>
+              </h2>
+              <h6 class="mb-2 text-base text-[#1D1D1D] font-medium">Projects Complated</h6>
+            </div>
+          </div>
+          <div class="px-[3px] text-[#1D1D1D]">
+            <div class="mb-[50px]">
+              <h2 class="text-[90px] md:text-[120px] font-extrabold text-stroke mb-2 flex items-center">9
+                <span class="text-[80px] font-semibold text-stroke md:mt-5">k</span>
+              </h2>
+              <h6 class="mb-2 text-base text-[#1D1D1D] font-medium">Happy Customers</h6>
+            </div>
+          </div>
+          <div class="px-[3px] text-[#1D1D1D]">
+            <div class="mb-[50px]">
+              <h2 class="text-[90px] md:text-[120px] font-extrabold mb-2">12</h2>
+              <h6 class="mb-2 text-base text-[#1D1D1D] font-medium">Awards Winning</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pt-[120px] pb-[120px] h-fit font-epilogue">
+      <div class="px-3 sm:px-9 md:px-14 lg:px-9 xl:px-28">
+        <div class="mb-20">
+          <div class="lg:flex lg:justify-between lg:relative">
+            <div class="px-[3px]">
+              <h6 class="px-[30px] py-[7px] border rounded-full border-[#1D1D1D] w-[125px] h-[38px] text-xs text-[#1D1D1D] flex items-center justify-center mb-4 cursor-pointer">OUR BLOG</h6>
+                <h2 class="text-[28px] lg:text-[45px] md:text-[35px] font-semibold mb-2 text-[#1D1D1D]">Latest News.</h2>
+            </div>
+            <div class="px-[3px] mt-5">
+              <a href="blog-classic.html" class="w-[50px] h-[50px] bg-gray-200 rounded-full text-[#1D1D1D] text-sm font-light flex items-center lg:mr-40">
+                <span class="absolute left-9 md:left-20 lg:left-[80%] xl:left-[85%] flex items-center">View All Our News
+                  <span>
+                    <svg width="18px" height="18px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path fill="#1D1D1D" d="M768 256H353.6a32 32 0 1 1 0-64H800a32 32 0 0 1 32 32v448a32 32 0 0 1-64 0V256z"/><path fill="#1D1D1D" d="M777.344 201.344a32 32 0 0 1 45.312 45.312l-544 544a32 32 0 0 1-45.312-45.312l544-544z"/></svg>
+                  </span>
+                </span>
+                
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="px-[3px] lg:grid lg:grid-cols-2 lg:gap-5">
+            <div class="mb-[50px]">
+              <div class="w-full h-fit border border-gray-300 rounded-md sm:grid sm:grid-cols-2">
+                <div class="px-[15px]">
+                  <div class="mt-[15px]">
+                    <img src="/images/h1.jpg" alt="">
+                  </div>
+                </div>
+                <div class="px-[15px] sm:mt-10 lg:mt-0">
+                  <div class="py-[30px]">
+                    <span class="text-xs text-[#1D1D1D] mb-[15px] font-normal">AUGUST 6, 2022</span>
+                    <h5 class="text-lg md:text-2xl text-[#1D1D1D] font-medium mt-2">
+                      <a href="#">Free advertising for your online business.</a>
+                    </h5>
+                    <div class="mt-[15px] flex">
+                      <a href="#" class="bg-gray-200 px-5 py-2 rounded-md text-[13px] text-[#1D1D1D]  flex items-center justify-center">Marketing</a>
+                      <a href="#" class="bg-gray-200 px-5 py-2 rounded-md text-[13px] text-[#1D1D1D]  flex items-center justify-center ml-1">Design</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="w-full h-fit border border-gray-300 rounded-md sm:grid sm:grid-cols-2">
+                <div class="px-[15px]">
+                  <div class="mt-[15px]">
+                    <img src="/images/h4.jpg" alt="2">
+                  </div>
+                </div>
+                <div class="px-[15px] sm:mt-10 lg:mt-0">
+                  <div class="py-[30px]">
+                    <span class="text-xs text-[#1D1D1D] mb-[15px] font-normal">AUGUST 6, 2022</span>
+                    <h5 class="text-lg md:text-2xl text-[#1D1D1D] font-medium mt-2">
+                      <a href="#">Business meeting 2023 in San Francisco.</a>
+                    </h5>
+                    <div class="mt-[15px] flex">
+                      <a href="#" class="bg-gray-200 px-5 py-2 rounded-md text-[13px] text-[#1D1D1D]  flex items-center justify-center">Marketing</a>
+                      <a href="#" class="bg-gray-200 px-5 py-2 rounded-md text-[13px] text-[#1D1D1D]  flex items-center justify-center ml-1">Design</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- gsap3 -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

@@ -5,6 +5,10 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      epilogue: "'Epilogue', serif",
+      sora: "'Sora', serif"
+    },
     boxShadow: {
       'xls': '0 6px 30px -8px rgb(0 0 0 / 0.1), 5px 0px 8px -6px rgb(0 0 0 / 0.1)'
     },
@@ -309,6 +313,14 @@ export default {
     }),
     extend: {
       keyframes: {
+        infinitescroll: {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        },
+        rotate: {
+          from: { transform: 'rotate(-360deg)' },
+          to: { transform: 'rotate(360deg)' },
+        },
         shine: {
           '100%': { left: '125%' },
         },
@@ -325,6 +337,8 @@ export default {
         }
       },
       animation: {
+        infinitescroll: 'infinitescroll 60s linear infinite',
+        rotate:'rotate 50s linear infinite',
         shine: 'shine 0.8s',
         'intro-x-animation': 'introXAnimation .4s ease-in-out forwards .33333s',
         'burger-hover-2': 'burgerHover 1s infinite ease-in-out alternate forwards 200ms',
