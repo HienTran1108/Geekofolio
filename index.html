@@ -8,17 +8,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <title>Geekfolio</title>
+    <link rel="stylesheet" href="./src/index.less">
+    <link rel="stylesheet" href="./src/icon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/7ca42f71ef.js" crossorigin="anonymous"></script>
   </head>
   <body>
 
     <!-- Header -->
-    <div id="header" class="fixed z-20 top-0 w-full bg-gray-100  text-black border-b  epilogue-font ">
+    <div id="header" class="fixed z-20 top-0 w-full bg-gray-100  text-black border-b  font-epilogue ">
 
       
       <div class="max-w-7xl mx-auto relative">
         <div class="-mx-2 h-14 lg:h-20">
-          <div class="flex justify-between items-center h-full">
-            <div class="w-20 ml-9 lg:ml-0 lg:w-28 h-6 cursor-pointer">
+          <div class="flex justify-between items-center h-full mx-9 lg:mx-14 xl:mx-0">
+            <!-- Logo -->
+            <div class="w-20 lg:w-28 h-6 cursor-pointer">
               <img src="https://ui-themez.smartinnovates.net/items/geekfolio/light/assets/imgs/logo-dark.png
             " alt="">
             </div>
@@ -36,186 +41,247 @@
                       <!-- Home Dark -->
                       <div class="col-span-3 ">
                         <p class="font-medium text-base mb-8"> HOME DARK</p>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                            Main Home</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black opacity-50 transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Corporate business</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Home
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-main.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Main Home</p>
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-corporate.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Corporate business</p>
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-onepage.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Home
                             One Page</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black opacity-50 transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Digital
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-digital-agency.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Digital
                           Agency</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black opacity-50 transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Freelancer</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black opacity-50 transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Maketing
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-freelancer.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Freelancer</p>
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-marketing-agency.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Maketing
                           Agency</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black opacity-50 transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Creative
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-creative-agency.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Creative
                           Agency</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Startup
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-startup.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Startup
                           Business</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black opacity-50 transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Architecture</p>
-                        </div>
-                        
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-architecture.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Architecture</p>
+                          </div>
+                        </a>
                       </div>
                       <!-- Home Light -->
                       <div class="col-span-3 ">
                         <p class="font-medium text-base mb-8"> HOME LIGHT</p>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                            Main Home</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black opacity-50 transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Corporate business</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Home
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-main.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Main Home</p>
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-corporate.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Corporate business</p>
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-onepage.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Home
                             One Page</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black opacity-50 transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Digital
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-digital-agency.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Digital
                           Agency</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black opacity-50 transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Freelancer</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black opacity-50 transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Maketing
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-freelancer.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Freelancer</p>
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-marketing-agency.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Maketing
                           Agency</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black opacity-50 transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Creative
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-creative-agency.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Creative
                           Agency</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Startup
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-startup.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Startup
                           Business</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black opacity-50 transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Architecture</p>
-                        </div>
-                        
-                      </div>
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-architecture.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Architecture</p>
+                          </div>
+                        </a>
+                      </div>  
                       <!-- Show Cases -->
                       <div class="col-span-3 ">
                         <p class="font-medium text-base mb-8"> SHOWCASES</p>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                            Parallas Slider</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black opacity-50 transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Frame
+                        
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-parallax-slider.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Parallas Slider</p>
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-frame-slider.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Frame
                             Slider</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Circle
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-circle-slider.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Circle
                           Slider</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black opacity-50 transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Showcase Carousel</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black opacity-50 transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Interactive Links1</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black opacity-50 transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Interactive Links2</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black opacity-50 transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Vertical
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-carousel.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Showcase Carousely</p>
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-interactive-center-horizontal.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Interactive Links1</p>
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-interactive-center.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Interactive Links2</p>
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-parallax.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Vertical
                           Parallas</p>
-                        </div>
-                      </div>
+                          </div>
+                        </a>
+                      </div>  
+                
                       <!-- Show Cases Light -->
                       <div class="col-span-3 ">
-                        <p class="font-medium text-base mb-8"> SHOWCASES</p>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                            Parallas Slider</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black opacity-50 transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Showcase Carousel</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black opacity-50 transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Interactive Links1</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black opacity-50 transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Interactive Links2</p>
-                        </div>
-                        <div class="group flex items-center">
-                          <div class="w-0 group-hover:w-3 h-0.5 bg-black opacity-50 transition-all duration-500 ease"></div>
-                          <p class="py-3 text-sm group-hover:ml-2.5 transform transition-all duration-500 ease">
-                            Vertical
+                        <p class="font-medium text-base mb-8"> SHOWCASES LIGHT</p>
+                        
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-parallax-slider.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Parallas Slider</p>
+                          </div>
+                        </a>
+                        
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-carousel.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Showcase Carousely</p>
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-interactive-center-horizontal.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Interactive Links1</p>
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-interactive-center.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Interactive Links2</p>
+                          </div>
+                        </a>
+                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-parallax.html">
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              Vertical
                           Parallas</p>
-                        </div>
-                      </div>
-                      
+                          </div>
+                        </a>
+                      </div>    
                     </div>
                   </div>
                 </div>
@@ -227,26 +293,34 @@
                   <div class="ml-1 w-0.5 border-solid border-t-4 border-x-4 border-x-transparent border-black"></div>
                 </div>
                 <div class="sub-dropdown-content invisible opacity-0 top-32 transition-all ease-in duration-300 border-2 absolute z-50 font-normal w-64 bg-white border-gray-100 px-3 py-5 text-[13px]  -10 ">
-                  <div class="group flex items-center px-5">
-                    <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                    <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                      About</p>
-                  </div>
-                  <div class="group flex items-center px-5">
-                    <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                    <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                      Services</p>
-                  </div>
-                  <div class="group flex items-center px-5">
-                    <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                    <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                      Out Team</p>
-                  </div>
-                  <div class="group flex items-center px-5">
-                    <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                    <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                      Contact Us</p>
-                  </div>
+                  <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/page-about.html">
+                    <div class="group flex items-center px-5">
+                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                      <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                        About</p>
+                    </div>
+                  </a>
+                  <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/page-services.html">
+                    <div class="group flex items-center px-5">
+                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                      <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                        Services</p>
+                    </div>
+                  </a>
+                  <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/page-team.html">
+                    <div class="group flex items-center px-5">
+                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                      <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                        Out Team</p>
+                    </div>
+                  </a>
+                  <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/page-contact.html">
+                    <div class="group flex items-center px-5">
+                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                      <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                        Contact Us</p>
+                    </div>
+                  </a>
                 </div>
               </div>
               <!-- PORFOLIO -->
@@ -265,21 +339,27 @@
                     <i class="fas fa-angle-right icon-arrow font-black text-sm pr-4"></i>
                     <div
                       class="invisible group-hover:visible opacity-0 group-hover:opacity-100 text-left top-1/4 group-hover:top-8 transition-all ease-in duration-300 border-2 right-40 absolute font-normal w-56  left-64 bg-white border-gray-100 px-3 py-5 text-[13px]  ">
-                      <div class="hover-increase-width flex items-center px-5">
-                        <div class="hover-increase-width-content w-0 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="py-3 text-sm hover:ml-2.5 transition-all duration-500 ease">
-                          Grid 2 colums</p>
-                      </div>
-                      <div class="hover-increase-width flex items-center px-5">
-                        <div class="hover-increase-width-content w-0 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="py-3 text-sm hover:ml-2.5 transition-all duration-500 ease">
-                          Grid 3 colums</p>
-                      </div>
-                      <div class="hover-increase-width flex items-center px-5">
-                        <div class="hover-increase-width-content w-0 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="py-3 text-sm hover:ml-2.5 transition-all duration-500 ease">
-                          Grid 4 colums</p>
-                      </div>
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-grid-2.html">
+                        <div class="hover-increase-width flex items-center px-5">
+                          <div class="hover-increase-width-content w-0 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="py-3 text-sm hover:ml-2.5 transition-all duration-500 ease">
+                            Grid 2 colums</p>
+                        </div>
+                      </a>
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-grid-3.html">
+                        <div class="hover-increase-width flex items-center px-5">
+                          <div class="hover-increase-width-content w-0 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="py-3 text-sm hover:ml-2.5 transition-all duration-500 ease">
+                            Grid 3 colums</p>
+                        </div>
+                      </a>
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-grid-4.html">
+                        <div class="hover-increase-width flex items-center px-5">
+                          <div class="hover-increase-width-content w-0 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="py-3 text-sm hover:ml-2.5 transition-all duration-500 ease">
+                            Grid 4 colums</p>
+                        </div>
+                      </a>
                     </div>
                   </div>
                   <div class="group flex justify-between text-center items-center">
@@ -291,45 +371,59 @@
                     <i class="fas fa-angle-right icon-arrow font-black text-sm pr-4"></i>
                     <div
                       class="invisible group-hover:visible opacity-0 group-hover:opacity-100 text-left top-28 group-hover:top-20 transition-all ease-in duration-300 border-2 right-40 absolute font-normal w-56  left-64 bg-white border-gray-100 px-3 py-5 text-[13px]  ">
-                      <div class="hover-increase-width flex items-center px-5">
-                        <div class="hover-increase-width-content w-0 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="py-3 text-sm hover:ml-2.5 transition-all duration-500 ease">
-                          Mansory 2 colums</p>
-                      </div>
-                      <div class="hover-increase-width flex items-center px-5">
-                        <div class="hover-increase-width-content w-0 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="py-3 text-sm hover:ml-2.5 transition-all duration-500 ease">
-                          Mansory 3 colums</p>
-                      </div>
-                      <div class="hover-increase-width flex items-center px-5">
-                        <div class="hover-increase-width-content w-0 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="py-3 text-sm hover:ml-2.5 transition-all duration-500 ease">
-                          Mansory 4 colums</p>
-                      </div>
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-masonry-2.html">
+                        <div class="hover-increase-width flex items-center px-5">
+                          <div class="hover-increase-width-content w-0 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="py-3 text-sm hover:ml-2.5 transition-all duration-500 ease">
+                            Mansory 2 colums</p>
+                        </div>
+                      </a>
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-masonry-3.html">
+                        <div class="hover-increase-width flex items-center px-5">
+                          <div class="hover-increase-width-content w-0 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="py-3 text-sm hover:ml-2.5 transition-all duration-500 ease">
+                            Mansory 3 colums</p>
+                        </div>
+                      </a>
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-masonry-4.html">
+                        <div class="hover-increase-width flex items-center px-5">
+                          <div class="hover-increase-width-content w-0 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="py-3 text-sm hover:ml-2.5 transition-all duration-500 ease">
+                            Mansory 4 colums</p>
+                        </div>
+                      </a>
                     </div>
                   </div>
-                  <div class="group flex items-center px-5">
-                    <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                    <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                      Portfiolio Metro</p>
-                  </div>
-                  <div class="group flex items-center px-5">
-                    <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                    <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                      Modern Grid</p>
-                  </div>
-                  <div class="group flex items-center px-5">
-                    <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                    <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                      Project
-                    Details 1</p>
-                  </div>
-                  <div class="group flex items-center px-5">
-                    <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                    <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                      Project
-                    Details 2</p>
-                  </div>
+                  <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-metro.html">
+                    <div class="group flex items-center px-5">
+                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                      <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                        Portfiolio Metro</p>
+                    </div>
+                  </a>
+                  <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-modern.html">
+                    <div class="group flex items-center px-5">
+                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                      <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                        Modern Grid</p>
+                    </div>
+                  </a>
+                  <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/project-details1.html">
+                    <div class="group flex items-center px-5">
+                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                      <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                        Project
+                      Details 1</p>
+                    </div>
+                  </a>
+                  <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/project-details2.html">
+                    <div class="group flex items-center px-5">
+                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                      <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                        Project
+                      Details 2</p>
+                    </div>
+                  </a>
                 </div>
               </div>
               <!-- BLOGS -->
@@ -339,28 +433,36 @@
                   <div class="ml-1 w-0.5 border-solid border-t-4 border-x-4 border-x-transparent border-black"></div>
                 </div>
                 <div class="sub-dropdown-content invisible opacity-0 top-32 transition-all ease-in duration-300 border-2 absolute z-50 font-normal w-64 bg-white border-gray-100 px-3 py-5 text-[13px]  -10 ">
-                  <div class="group flex items-center px-5">
-                    <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                    <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                      Blog
-                    Standerd</p>
-                  </div>
-                  <div class="group flex items-center px-5">
-                    <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                    <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                      Blog List</p>
-                  </div>
-                  <div class="group flex items-center px-5">
-                    <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                    <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                      Image Our
-                    Frame</p>
-                  </div>
-                  <div class="group flex items-center px-5">
-                    <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                    <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                      Blog Details</p>
-                  </div>
+                  <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/blog-classic.html">
+                    <div class="group flex items-center px-5">
+                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                      <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                        Blog
+                      Standerd</p>
+                    </div>
+                  </a>
+                  <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/blog-list.html">
+                    <div class="group flex items-center px-5">
+                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                      <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                        Blog List</p>
+                    </div>
+                  </a>
+                  <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/blog-half-img.html">
+                    <div class="group flex items-center px-5">
+                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                      <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                        Image Our
+                      Frame</p>
+                    </div>
+                  </a>
+                  <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/blog-details.html">
+                    <div class="group flex items-center px-5">
+                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                      <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                        Blog Details</p>
+                    </div>
+                  </a>
                 </div>
               </div>
               <!-- SHOP -->
@@ -370,33 +472,43 @@
                   <div class="ml-1 w-0.5 border-solid border-t-4 border-x-4 border-x-transparent border-black"></div>
                 </div>
                 <div class="sub-dropdown-content invisible opacity-0 top-32 transition-all ease-in duration-300 border-2 absolute z-50 font-normal w-64 bg-white border-gray-100 px-3 py-5 text-[13px]  -10 ">
-                  <div class="group flex items-center px-5">
-                    <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                    <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                      Shop List</p>
-                  </div>
-                  <div class="group flex items-center px-5">
-                    <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                    <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                      Single
-                    Product</p>
-                  </div>
-                  <div class="group flex items-center px-5">
-                    <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                    <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                      Cart</p>
-                  </div>
-                  <div class="group flex items-center px-5">
-                    <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                    <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                      Check Out</p>
-                  </div>
+                  <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/shop-list.html">
+                    <div class="group flex items-center px-5">
+                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                      <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                        Shop List</p>
+                    </div>
+                  </a>
+                  <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/shop-product.html">
+                    <div class="group flex items-center px-5">
+                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                      <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                        Single
+                      Product</p>
+                    </div>
+                  </a>
+                  <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/shop-cart.html">
+                    <div class="group flex items-center px-5">
+                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                      <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                        Cart</p>
+                    </div>
+                  </a>
+                  <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/shop-checkout.html">
+                    <div class="group flex items-center px-5">
+                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                      <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                        Check Out</p>
+                    </div>
+                  </a>
                 </div>
               </div>
               
-              <div class="cursor-pointer px-3 py-10 mx-4 flex items-center text-sm font-medium tracking-widest">
-                CONTACT 
-              </div>
+              <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/page-contact.html">
+                <div class="cursor-pointer px-3 py-10 mx-4 flex items-center text-sm font-medium tracking-widest">
+                  CONTACT 
+                </div>
+              </a>
 
             </div>
             <!-- Container hamburger and search -->
@@ -415,7 +527,7 @@
               </div>
             </div>
             <!-- Nút respomsive -->
-            <div id="hamburger" class="handle-menu cursor-pointer mr-9 lg:hidden">
+            <div id="hamburger" class="handle-menu cursor-pointer lg:hidden">
               <div class="flex justify-center items-center ">
                 <i class="fa-solid fa-bars text-xl"></i>
               </div>
@@ -443,181 +555,260 @@
                   <div class="mx-0.5">
                     <div class="py-4 mt-4 px-8 border-b bg-white"> HOME DARK</div>
                     <ul class="px-4 pt-3 mx-4 font-light leading-loose overflow-hidden">
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Main Home</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Corporate Business</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Home One Page</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Digital Agency</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Freelancer</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Maketing Agency</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Creative Agency</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Startup Business</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Architecture</p>
-                      </div>
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-main.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Main Home</p>
+                        </div>
+                      </a>
+                      
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-corporate.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Corporate Business</p>
+                        </div>
+                      </a>
+
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-onepage.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Home One Page</p>
+                        </div>
+                      </a>
+
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-digital-agency.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Digital Agency</p>
+                        </div>
+                      </a>
+
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-freelancer.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Freelancer</p>
+                        </div>
+                      </a>
+                      
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-marketing-agency.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Maketing Agency</p>
+                        </div>
+                      </a>
+
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-creative-agency.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Creative Agency</p>
+                        </div>
+                      </a>
+
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-startup.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Startup Business</p>
+                        </div>
+                      </a>
+
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-architecture.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Architecture</p>
+                        </div>
+                      </a>
                     </ul>
                   </div>
                   <!-- HOME LIGHT  -->
                   <div class="mx-0.5">
                     <div class="py-4 mt-4 px-8 border-b bg-white"> HOME LIGHT</div>
                     <ul class="px-4 pt-3 mx-4 font-light leading-loose overflow-hidden">
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Main Home</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Corporate Business</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Home One Page</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Digital Agency</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Freelancer</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Maketing Agency</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Creative Agency</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Startup Business</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Architecture</p>
-                      </div>
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-main.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Main Home</p>
+                        </div>
+                      </a>
+                      
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-corporate.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Corporate Business</p>
+                        </div>
+                      </a>
+
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-onepage.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Home One Page</p>
+                        </div>
+                      </a>
+
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-digital-agency.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Digital Agency</p>
+                        </div>
+                      </a>
+
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-freelancer.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Freelancer</p>
+                        </div>
+                      </a>
+                      
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-marketing-agency.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Maketing Agency</p>
+                        </div>
+                      </a>
+
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-creative-agency.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Creative Agency</p>
+                        </div>
+                      </a>
+
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-startup.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Startup Business</p>
+                        </div>
+                      </a>
+
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-architecture.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Architecture</p>
+                        </div>
+                      </a>
                     </ul>
                   </div>
                   <!-- SHOWCASES -->
                   <div class="mx-0.5">
                     <div class="py-4 mt-4 px-8 border-b bg-white"> SHOWCASES</div>
                     <ul class="px-4 pt-3 mx-4 font-light leading-loose overflow-hidden">
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Parallas Slider</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Frame Slider</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Circle Slider</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Showcase Carousel</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Interactive Links1</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Interactive Links2</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Vertical Parallas</p>
-                      </div>
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-parallax-slider.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Parallas Slider</p>
+                        </div>
+                      </a>
+
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-frame-slider.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Frame Slider</p>
+                        </div>
+                      </a>
+
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-circle-slider.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Circle Slider</p>
+                        </div>
+                      </a>
+
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-carousel.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Showcase Carousel</p>
+                        </div>
+                      </a>
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-interactive-center-horizontal.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Interactive Links1</p>
+                        </div>
+                      </a>
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-interactive-center.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Interactive Links2</p>
+                        </div>
+                      </a>
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-parallax.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Vertical Parallas</p>
+                        </div>
+                      </a>
                     </ul>
                   </div>
                   <!-- SHOWCASES LIGHT -->
                   <div class="mx-0.5">
                     <div class="py-4 mt-4 px-8 border-b bg-white"> SHOWCASES LIGHT</div>
                     <ul class="px-4 py-3 mx-4 font-light leading-loose overflow-hidden">
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Parallas Slider</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Showcase Carousel</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Interactive Links1</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Interactive Links2</p>
-                      </div>
-                      <div class="py-1.5 group flex items-center">
-                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                          Vertical Parallas</p>
-                      </div>
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-parallax-slider.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Parallas Slider</p>
+                        </div>
+                      </a>             
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-carousel.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Showcase Carousel</p>
+                        </div>
+                      </a>
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-interactive-center-horizontal.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Interactive Links1</p>
+                        </div>
+                      </a>
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-interactive-center.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Interactive Links2</p>
+                        </div>
+                      </a>
+                      <a href="https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-parallax.html">
+                        <div class="py-1.5 group flex items-center">
+                          <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                          <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                            Vertical Parallas</p>
+                        </div>
+                      </a>
                     </ul>
                   </div>
                 </li>
               </div>
               <!-- Pages -->
               <div>
-                <li id="Pages" class="handle-collapse border border-t-0  py-5">
+                <li id="Pages" class="handle-collapse cursor-pointer border border-t-0  py-5">
                   <div class="px-3 mx-4 flex items-center text-sm font-medium tracking-widest">
                     PAGES 
                     <div class="ml-1 w-0.5 border-solid border-t-4 border-x-4 border-x-transparent border-black"></div>
@@ -626,33 +817,41 @@
                 
                 <li id="Pages" class="handle-content overflow-hidden h-0"> 
                   <ul class="font-light py-3 bg-white leading-loose pl-8 mx-0.5">
-                    <div class="py-1.5 group flex items-center">
-                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                      <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                        About</p>
-                    </div>
-                    <div class="py-1.5 group flex items-center">
-                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                      <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                        Services</p>
-                    </div>
-                    <div class="py-1.5 group flex items-center">
-                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                      <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                        Our
-                      Team</p>
-                    </div>
-                    <div class="py-1.5 group flex items-center">
-                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                      <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                        Contact Us</p>
-                    </div>
+                    <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/page-about.html">
+                      <div class="py-1.5 group flex items-center">
+                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                          About</p>
+                      </div>
+                    </a>
+                    <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/page-services.html">
+                      <div class="py-1.5 group flex items-center">
+                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                          Services</p>
+                      </div>
+                    </a>
+                    <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/page-team.html">
+                      <div class="py-1.5 group flex items-center">
+                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                          Our
+                        Team</p>
+                      </div>
+                    </a>
+                    <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/page-contact.html">
+                      <div class="py-1.5 group flex items-center">
+                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                          Contact Us</p>
+                      </div>
+                    </a>
                   </ul>
                 </li>
               </div>
               <!-- PORFOLIO -->
               <div>
-                <li id="PORFOLIO" class="handle-collapse border border-t-0  py-5">
+                <li id="PORFOLIO" class="handle-collapse cursor-pointer border border-t-0  py-5">
                   <div class="px-3 mx-4 flex items-center text-sm font-medium tracking-widest">
                     PORFOLIO 
                     <div class="ml-1 w-0.5 border-solid border-t-4 border-x-4 border-x-transparent border-black"></div>
@@ -671,21 +870,27 @@
                       </div>
                       <li class="invisible group-hover:visible opacity-0 group-hover:opacity-100 group-hover:ml-6 h-0 group-hover:h-full transition-all duration-300 ease">
                         <ul class="pl-7 border mr-10 leading-loose py-5">
-                          <div class="py-2 flex items-center hover-increase-width">
-                            <div class="w-0 hover-increase-width-content h-0.5 bg-black transition-all duration-500 ease"></div>
-                            <p class="font-normal hover:ml-2.5 transition-all duration-500 ease">
-                              Grid 2 Columns</p>
-                          </div>
-                          <div class="py-2 flex items-center hover-increase-width">
-                            <div class="w-0 hover-increase-width-content h-0.5 bg-black transition-all duration-500 ease"></div>
-                            <p class="font-normal hover:ml-2.5 transition-all duration-500 ease">
-                              Grid 3 Columns</p>
-                          </div>
-                          <div class="py-2 flex items-center hover-increase-width">
-                            <div class="w-0 hover-increase-width-content h-0.5 bg-black transition-all duration-500 ease"></div>
-                            <p class="font-normal hover:ml-2.5 transition-all duration-500 ease">
-                              Grid 4 Columns</p>
-                          </div>
+                          <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-grid-2.html">
+                            <div class="py-2 flex items-center hover-increase-width">
+                              <div class="w-0 hover-increase-width-content h-0.5 bg-black transition-all duration-500 ease"></div>
+                              <p class="font-normal hover:ml-2.5 transition-all duration-500 ease">
+                                Grid 2 Columns</p>
+                            </div>
+                          </a>
+                          <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-grid-3.html">
+                            <div class="py-2 flex items-center hover-increase-width">
+                              <div class="w-0 hover-increase-width-content h-0.5 bg-black transition-all duration-500 ease"></div>
+                              <p class="font-normal hover:ml-2.5 transition-all duration-500 ease">
+                                Grid 3 Columns</p>
+                            </div>
+                          </a>
+                          <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-grid-4.html">
+                            <div class="py-2 flex items-center hover-increase-width">
+                              <div class="w-0 hover-increase-width-content h-0.5 bg-black transition-all duration-500 ease"></div>
+                              <p class="font-normal hover:ml-2.5 transition-all duration-500 ease">
+                                Grid 4 Columns</p>
+                            </div>
+                          </a>
                         </ul>
                       </li>
                     </div>
@@ -700,52 +905,67 @@
                       </div>
                       <li class="invisible group-hover:visible opacity-0 group-hover:opacity-100 group-hover:ml-6 h-0 group-hover:h-full transition-all duration-300 ease">
                         <ul class="pl-7 border mr-10 leading-loose py-5">
-                          <div class="py-2 flex items-center hover-increase-width">
-                            <div class="w-0 hover-increase-width-content h-0.5 bg-black transition-all duration-500 ease"></div>
-                            <p class="font-normal hover:ml-2.5 transition-all duration-500 ease">
-                              Mansory 2 Columns</p>
-                          </div>
-                          <div class="py-2 flex items-center hover-increase-width">
-                            <div class="w-0 hover-increase-width-content h-0.5 bg-black transition-all duration-500 ease"></div>
-                            <p class="font-normal hover:ml-2.5 transition-all duration-500 ease">
-                              Mansory 3 Columns</p>
-                          </div>
-                          <div class="py-2 flex items-center hover-increase-width">
-                            <div class="w-0 hover-increase-width-content h-0.5 bg-black transition-all duration-500 ease"></div>
-                            <p class="font-normal hover:ml-2.5 transition-all duration-500 ease">
-                              Mansory 4 Columns</p>
-                          </div>
+                          <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-masonry-2.html">
+                            <div class="py-2 flex items-center hover-increase-width">
+                              <div class="w-0 hover-increase-width-content h-0.5 bg-black transition-all duration-500 ease"></div>
+                              <p class="font-normal hover:ml-2.5 transition-all duration-500 ease">
+                                Mansory 2 Columns</p>
+                            </div>
+                          </a>
+                          <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-masonry-3.html">
+                            <div class="py-2 flex items-center hover-increase-width">
+                              <div class="w-0 hover-increase-width-content h-0.5 bg-black transition-all duration-500 ease"></div>
+                              <p class="font-normal hover:ml-2.5 transition-all duration-500 ease">
+                                Mansory 3 Columns</p>
+                            </div>
+                          </a>
+                          <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-masonry-4.html">
+                            <div class="py-2 flex items-center hover-increase-width">
+                              <div class="w-0 hover-increase-width-content h-0.5 bg-black transition-all duration-500 ease"></div>
+                              <p class="font-normal hover:ml-2.5 transition-all duration-500 ease">
+                                Mansory 4 Columns</p>
+                            </div>
+                          </a>
                         </ul>
                       </li>
                     </div>
                     
-                    <div class="py-1.5 group flex items-center">
-                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                      <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                        Porfolio Metro</p>
-                    </div>
-                    <div class="py-1.5 group flex items-center">
-                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                      <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                        Modern Grid</p>
-                    </div>
-                    <div class="py-1.5 group flex items-center">
-                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                      <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                        Project Details 1</p>
-                    </div>
-                    <div class="py-1.5 group flex items-center">
-                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                      <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                        Project Details 2</p>
-                    </div>
+                    <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-metro.html">
+                      <div class="py-1.5 group flex items-center">
+                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                          Porfolio Metro</p>
+                      </div>
+                    </a>
+                    <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-modern.html">
+                      <div class="py-1.5 group flex items-center">
+                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                          Modern Grid</p>
+                      </div>
+                    </a>
+                    <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/project-details1.html">
+                      <div class="py-1.5 group flex items-center">
+                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                          Project Details 1</p>
+                      </div>
+                    </a>
+                    <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/project-details2.html">
+                      <div class="py-1.5 group flex items-center">
+                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                          Project Details 2</p>
+                      </div>
+
+                    </a>
                   </ul>
                 </li>
               </div>
           
               <!-- Blog -->
               <div>
-                <li id="Blog" class="handle-collapse border border-t-0  py-5">
+                <li id="Blog" class="handle-collapse cursor-pointer border border-t-0  py-5">
                   <div class="px-3 mx-4 flex items-center text-sm font-medium tracking-widest">
                     BLOGS
                     <div class="ml-1 w-0.5 border-solid border-t-4 border-x-4 border-x-transparent border-black"></div>
@@ -754,32 +974,40 @@
                 
                 <li id="Blog" class="handle-content overflow-hidden h-0"> 
                   <ul class="font-light py-3 bg-white leading-loose pl-8 mx-0.5">
-                    <div class="py-1.5 group flex items-center">
-                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                      <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                        Block Standerd</p>
-                    </div>
-                    <div class="py-1.5 group flex items-center">
-                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                      <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                        Blog List</p>
-                    </div>
-                    <div class="py-1.5 group flex items-center">
-                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                      <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                        Image Out Frame</p>
-                    </div>
-                    <div class="py-1.5 group flex items-center">
-                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                      <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                        Blog Details</p>
-                    </div>
+                    <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/blog-classic.html">
+                      <div class="py-1.5 group flex items-center">
+                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                          Block Standerd</p>
+                      </div>
+                    </a>
+                    <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/blog-list.html">
+                      <div class="py-1.5 group flex items-center">
+                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                          Blog List</p>
+                      </div>
+                    </a>
+                    <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/blog-half-img.html">
+                      <div class="py-1.5 group flex items-center">
+                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                          Image Out Frame</p>
+                      </div>
+                    </a>
+                    <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/blog-details.html">
+                      <div class="py-1.5 group flex items-center">
+                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                          Blog Details</p>
+                      </div>
+                    </a>
                   </ul>
                 </li>
               </div>
               <!-- Shop -->
-              <div>
-                <li id="Shop" class="handle-collapse border border-t-0  py-5">
+              <div> 
+                <li id="Shop" class="handle-collapse cursor-pointer border border-t-0  py-5">
                   <div class="px-3 mx-4 flex items-center text-sm font-medium tracking-widest">
                     SHOP
                     <div class="ml-1 w-0.5 border-solid border-t-4 border-x-4 border-x-transparent border-black"></div>
@@ -788,34 +1016,44 @@
                 
                 <li id="Shop" class="handle-content overflow-hidden h-0"> 
                   <ul class="font-light py-3 bg-white leading-loose pl-8 mx-0.5">
-                    <div class="py-1.5 group flex items-center">
-                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                      <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                        Shop List</p>
-                    </div>
-                    <div class="py-1.5 group flex items-center">
-                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                      <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                        Single Product</p>
-                    </div>
-                    <div class="py-1.5 group flex items-center">
-                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                      <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                        Cart</p>
-                    </div>
-                    <div class="py-1.5 group flex items-center">
-                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                      <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
-                        Check Out</p>
-                    </div>
+                    <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/shop-list.html">
+                      <div class="py-1.5 group flex items-center">
+                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                          Shop List</p>
+                      </div>
+                    </a>
+                    <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/shop-product.html">
+                      <div class="py-1.5 group flex items-center">
+                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                          Single Product</p>
+                      </div>
+                    </a>
+                    <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/shop-cart.html">
+                      <div class="py-1.5 group flex items-center">
+                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                          Cart</p>
+                      </div>
+                    </a>
+                    <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/shop-checkout.html">
+                      <div class="py-1.5 group flex items-center">
+                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                        <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                          Check Out</p>
+                      </div>
+                    </a>
                   </ul>
                 </li>
               </div>
               <!-- Contact -->
-              <li class="border-b py-5">
-                <div class="px-3 mx-4 flex items-center text-sm font-medium tracking-widest">
-                  CONTACT
-                </div>
+              <li class="border-b py-5 cursor-pointer">
+                <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/page-contact.html">
+                  <div class="px-3 mx-4 flex items-center text-sm font-medium tracking-widest">
+                    CONTACT
+                  </div>
+                </a>
               </li>
               
             </ul>
@@ -897,7 +1135,7 @@
         </div>
         
       </section>
-      <section class="mt-[1100px] lg:mt-[1200px] pb-[120px] font-epilogue">
+      <section class="mt-[950px] lg:mt-[900px] pb-[120px] font-epilogue">
         <div class="">
           <div class="mb-20 px-3 sm:px-9 md:px-14 lg:px-9 xl:px-28">
             <div class="px-0.5">
@@ -1492,12 +1730,133 @@
           </div>
         </div>
       </section>
+
+      <!-- Progress according to height -->
+      <div class="cursor-pointer fixed z-20 right-7 bottom-7 flex justify-center items-center w-12 h-12 rounded-full border-solid border-2 border-black">
+        <i class="fa-solid fa-angle-up"></i>
+      </div>
     </div>
+
+    <!-- footer -->
+    <div class="mt-24">
+      <div class=" md:mx-8 lg:mx-28 mb-12 px-3  epilogue-font">
+        <div
+          class="md:flex  text-center text-4xl lg:text-7xl font-bold items-center justify-center border rounded-xl p-5 mb-20">
+          Let's <br class="sm:hidden">
+          <span class=" md:ml-4 text-stroke">Disscuss </span>
+          <div class="flex items-center justify-center ">
+            <svg class="lg:w-20 lg:h-20 w-10 h-10" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.922 4.5V11.8125C13.922 11.9244 13.8776 12.0317 13.7985 12.1108C13.7193 12.1899 13.612 12.2344 13.7002 12.2344C13.3883 12.2344 13.281 12.1899 13.2018 12.1108C13.1227 12.0317 13.0783 11.9244 13.0783 11.8125V5.51953L4.79547 13.7953C4.71715 13.8736 4.61092 13.9176 4.70015 13.9176C4.38939 13.9176 4.28316 13.8736 4.20484 13.7953C4.12652 13.717 4.08252 13.6108 4.08252 13.5C4.08252 13.3892 4.12652 13.283 4.20484 13.2047L12.4806 4.92188H6.18765C6.07577 4.92188 5.96846 4.87743 5.88934 4.79831C5.81023 4.71919 5.76578 4.61189 5.76578 4.5C5.76578 4.38811 5.81023 4.28081 5.88934 4.20169C5.96846 4.12257 6.07577 4.07813 6.18765 4.07812H13.7002C13.612 4.07813 13.7193 4.12257 13.7985 4.20169C13.8776 4.28081 13.922 4.38811 13.922 4.5Z"
+                fill="currentColor"></path>
+            </svg>
+          </div>
+
+        </div>
+        <div class="grid grid-cols-1 2xl  lg:grid-cols-12 leading-10">
+          <div class="mb-10 col-span-1 lg:col-span-3">
+            <h6 class="text-base md:text-xl mb-2">Address</h6>
+            <p class="leading-8 text-base font-light text-gray-400">Germany — 785 15h Street, Office 478 Berlin, De 81566
+            </p>
+          </div>
+          <div class="mb-10 col-span-1 row-span-1 lg:col-span-4 lg:ml-28  ">
+            <h6 class="text-base md:text-xl mb-2">Say hello</h6>
+            <p class="leading-8 text-base font-light text-gray-400">hello@design.com</p>
+            <a href="" class="text-lg md:text-2xl font-medium  leading-6">+1 840 841 25 69</a>
+          </div>
+          <div class="mb-10 col-span-1 row-span-1 lg:col-span-2">
+            <h6 class="text-base md:text-xl mb-2">Social</h6>
+            <p class="leading-8 text-sm font-light text-gray-600 ">FACEBOOK</p>
+            <p class="leading-8 text-sm font-light text-gray-600">TWITTER</p>
+            <p class="leading-8 text-sm font-light text-gray-600">LINKEDIN</p>
+            <p class="leading-8 text-sm font-light text-gray-600">INSTAGRAM</p>
+          </div>
+          <div class="mb-10 col-span-1 row-span-1 lg:col-span-3">
+            <h6 class="text-base md:text-xl mb-2 ">Newsletter</h6>
+            <div class="border-b border-gray-300 w-full flex">
+              <input type="text" class=" w-11/12 hover:border-none focus:outline-none " aceholder="Type your Email">
+              <button type="button">
+                <i class="fa-solid fa-arrow-right"></i>
+
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto relative">
+        <div class="-mx-2 h-14 lg:h-20">
+          <div class="py-10 md:flex md:justify-between border-t border-gray-300">
+            <div class="w-20 lg:w-28 h-6 cursor-pointer">
+              <img src="https://ui-themez.smartinnovates.net/items/geekfolio/light/assets/imgs/logo-dark.png"
+                  alt="">
+            </div>
+            <div class="text-gray-400 text-sm">© 2023 Geekfolio is Proudly Powered by
+              <span class="underline">Ui-ThemeZ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header responsive -->
+    <script type="module" src="/src/menu-mobile.ts"></script>
+    <!--  gsapjs 3  -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- gsap3 -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
     <script type="module" src="/src/main.ts"></script>
+    <script>
+      // Header
+      window.addEventListener("scroll", () => {
+        // Header scroll
+        var header = document.querySelector("#header")
+        header.classList.toggle("sticky", scrollY > 0);
+      });
+
+      // gsapjs 3
+      const time = {};
+      const state = {}; // Cấu trúc dữ liệu để theo dõi trạng thái mở/đóng
+      document.querySelectorAll('.handle-collapse').forEach((e) => {
+        e.addEventListener('click', (event) => {
+          event.preventDefault();
+          const targetId = event.currentTarget.id;
+          // console.log(targetId)
+          const parentElement = event.currentTarget.parentElement;
+          const contentElement = parentElement.querySelector(`.handle-content`);
+          // const iconElement = parentElement.querySelector(`.icon_arrow-down`);
+          
+          // Đóng tất cả .handle-content khác trong cùng một thẻ cha
+          // Đóng handle-content cùng thẻ cha với handle-collapse
+          document.querySelectorAll('.handle-content').forEach((element) => {
+            // có một timeline đã được tạo cho element.id không
+            if (element !== contentElement && time[element.id]) {
+              time[element.id].reverse();
+              // Cập nhật trạng thái state[element.id] để đánh dấu rằng phần tử đã được đóng.
+              state[element.id] = true; 
+            }
+          });
+          
+          if (!time[targetId]) {
+            time[targetId] = gsap.timeline({ defaults: { duration: 0.25, ease: 'power1.inOut' } });
+          } else {
+            // nếu state[targetId] đang mở là true khi click sẽ chạy time[targetId].reverse();
+            // nếu state[targetId] đang đóng là false khi click sẽ chạy time[targetId].play();
+            time[targetId][state[targetId] ? 'play' : 'reverse']();
+            // Cập nhật trạng thái: đang là false khi click sẽ thành true và ngược lại
+            state[targetId] = !state[targetId]; 
+            return;
+          }
+          
+          // Mở contentElement của handle-collapse được click
+          time[targetId].to(contentElement, { height: 'auto' }, '0');
+          // time[targetId].to(iconElement, { transform: 'rotate(-90deg)' }, '0');
+          
+        });
+      });
+    </script>
   </body>
 </html>

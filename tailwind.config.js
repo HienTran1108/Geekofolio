@@ -313,6 +313,10 @@ export default {
     }),
     extend: {
       keyframes: {
+        headerSticky: {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(0)'},
+        },
         infinitescroll: {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-100%)' },
@@ -337,6 +341,7 @@ export default {
         }
       },
       animation: {
+        'headerSticky' : 'headerSticky .5s ease-in-out 1 forwards',
         infinitescroll: 'infinitescroll 60s linear infinite',
         rotate:'rotate 50s linear infinite',
         shine: 'shine 0.8s',
