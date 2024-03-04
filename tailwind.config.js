@@ -1,3 +1,5 @@
+import { transformWithEsbuild } from 'vite';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -311,6 +313,9 @@ export default {
         900: '#881337',
       },
     }),
+    container: {
+      center: true,
+    },
     extend: {
       keyframes: {
         headerSticky: {
