@@ -1767,25 +1767,24 @@
     <script src="https://cdn.jsdelivr.net/npm/handlebars@4/dist/handlebars.js"></script>
     <script>
       // handlebars
-      const temp1 = document.getElementById("template-1");
-      const temp2 = document.getElementById("template-2");
-
-      
-        const template1 = Handlebars.compile(temp1.innerHTML);
-        const template2 = Handlebars.compile(temp2.innerHTML);
-
-        const data = {
-          "ourservices":  [ {"src": "/images/0.png", "span": "Product Design", "h6": "Digital Product Design"},
-                            {"src": "/images/1.png", "span": "Customs Services", "h6": "Branding & Design"},
-                            {"src": "/images/2.png", "span": "Product Development", "h6": "Web Development"}
-                          ],
-          "peoplesays" :  [ {"src": "/images/ceo.jpg", "name": "Leonard Heiser", "position": "CEO"},
-                            {"src": "/images/ceo2.jpg", "name": "Leonard Heiser", "position": "CEO"},
-                          ],
-        };
-        document.getElementById('ourservices').innerHTML = template1(data);
-        document.getElementById('peoplesays').innerHTML = template2(data);
-     
+      function handleBars (idTemplate, idDiv) {
+        const temp = document.getElementById(idTemplate);
+        if (temp) {
+          const template = Handlebars.compile(temp.innerHTML);
+          const data = {
+            "ourservices":  [ {"src": "/images/0.png", "span": "Product Design", "h6": "Digital Product Design"},
+                              {"src": "/images/1.png", "span": "Customs Services", "h6": "Branding & Design"},
+                              {"src": "/images/2.png", "span": "Product Development", "h6": "Web Development"}
+                            ],
+            "peoplesays" :  [ {"src": "/images/ceo.jpg", "name": "Leonard Heiser", "position": "CEO"},
+                              {"src": "/images/ceo2.jpg", "name": "Leonard Heiser", "position": "CEO"},
+                            ],
+          };
+          document.getElementById(idDiv).innerHTML = template(data);
+        }
+      }
+      handleBars('template-1', 'ourservices');
+      handleBars('template-2', 'peoplesays');
     </script>
     
 
@@ -1802,6 +1801,7 @@
     <!-- gsap3 -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
     <script type="module" src="/src/main.ts"></script>
+    <!-- <script type="module" src="/src/handlebar.ts"></script> -->
     <script type="text/javascript">
       // Header
       window.addEventListener("scroll", () => {
