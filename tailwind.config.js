@@ -361,5 +361,8 @@ export default {
       width: ["responsive", "hover", "focus"]
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss'),
+    require('autoprefixer'),
+  ],
 }
