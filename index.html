@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="./src/icon.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script src="https://kit.fontawesome.com/7ca42f71ef.js" crossorigin="anonymous"></script>
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- wow 1-->
   <link href="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css" rel="stylesheet">
 </head>
@@ -26,8 +28,6 @@
 
   <!-- Header -->
   <div id="header" class="fixed z-30 top-0 w-full bg-gray-100  text-black border-b">
-
-
     <div class="container max-w-7xl relative">
       <div class="-mx-2">
         <div class="flex justify-between items-center h-14 lg:h-20 mx-9 lg:mx-14 xl:mx-0">
@@ -35,196 +35,163 @@
           <div class="w-20 lg:w-28 h-6 cursor-pointer">
             <img src="https://ui-themez.smartinnovates.net/items/geekfolio/light/assets/imgs/logo-dark.png
             " alt="">
-            </div>
-            <!-- navbar web -->
-            <nav class="hidden lg:block h-full">
-              <ul class="flex justify-between text-sm font-semibold items-center h-full">
-                <!-- Home -->
-                <li class="sub-dropdown cursor-pointer h-full flex items-center px-3 mx-4">
-                  <div class="flex items-center text-sm font-medium tracking-widest">
-                    HOME 
-                    <div class="ml-1 w-0.5 border-solid border-t-4 border-x-4 border-x-transparent border-black"></div>
-                  </div>
-                  <ul class="sub-dropdown-content w-full invisible opacity-0 top-32 transition-all ease-in duration-300 absolute  left-1/2 transform -translate-x-1/2">
-                    <div class="-mx-14 py-8 font-light bg-white border-2 border-gray-100">
-                      <div class="mx-16 grid grid-cols-12">
-                        <!-- Home Dark -->
-                        <li class="col-span-3 ">
-                          <h6 class="font-medium text-base mb-8"> HOME DARK</h6>
-                          <div class="homedark"></div>
-                          <template id="template-homedark">
-                            {{#homedark}}
-                            <a href={{href}}>
-                              <div class="group flex items-center">
-                                <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                                <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                                 {{p}}</p>
-                              </div>
-                            </a>
-                          {{/homedark}}
-                          </template>
-                        </li>
-                        <!-- Home Light -->
-                        <li class="col-span-3 ">
-                          <h6 class="font-medium text-base mb-8"> HOME LIGHT</h6>
-                          <div class="homelight"></div>
-                          <template id="template-homelight">
-                            {{#homelight}}
-                            <a href={{href}}>
-                              <div class="group flex items-center">
-                                <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                                <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                                 {{p}}</p>
-                              </div>
-                            </a>
-                          {{/homelight}}
-                          </template>
-                          
-                        </li>  
-                        <!-- Show Cases -->
-                        <li class="col-span-3 ">
-                          <h6 class="font-medium text-base mb-8"> SHOWCASES</h6>
-                          <div class="showcase"></div>
-                          <template id="template-showcase">
-                            {{#showcase}}
-                            <a href={{href}}>
-                              <div class="group flex items-center">
-                                <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                                <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                                 {{p}}</p>
-                              </div>
-                            </a>
-                          {{/showcase}}
-                          </template>
-                         
-                        </li>  
-                  
-                        <!-- Show Cases Light -->
-                        <li class="col-span-3 ">
-                          <h6 class="font-medium text-base mb-8"> SHOWCASES LIGHT</h6>
-                          <div class="showcaselight"></div>
-                          <template id="template-showcaselight">
-                            {{#showcaselight}}
-                            <a href={{href}}>
-                              <div class="group flex items-center">
-                                <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                                <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                                 {{p}}</p>
-                              </div>
-                            </a>
-                          {{/showcaselight}}
-                          </template>
-                          
-                        </li>    
-                      </div>
+          </div>
+          <!-- navbar web -->
+          <nav class="hidden lg:block h-full">
+            <ul class="flex justify-between text-sm font-semibold items-center h-full">
+              <!-- Home -->
+              <li class="sub-dropdown cursor-pointer h-full flex items-center px-3 mx-4">
+                <div class="flex items-center text-sm font-medium tracking-widest">
+                  HOME 
+                  <div class="ml-1 w-0.5 border-solid border-t-4 border-x-4 border-x-transparent border-black"></div>
+                </div>
+                <ul class="sub-dropdown-content w-full invisible opacity-0 top-32 transition-all ease-in duration-300 absolute  left-1/2 transform -translate-x-1/2">
+                  <div class="lg:mx-6 xl:-mx-14 py-8 font-light bg-white border-2 border-gray-100">
+                    <div class="mx-16 grid grid-cols-12">
+                      <!-- Home Dark -->
+                      <li class="col-span-3 ">
+                        <h6 class="font-medium text-base mb-8"> HOME DARK</h6>
+                        <div class="homedark-light"></div>
+                        <script id="template-homedark-light" type="text/x-handlebars-template">
+                          {{#homedark-light}}
+                          <a href={{href}}>
+                            <div class="group flex items-center">
+                              <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                              <p class="py-2.5 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                                {{p}}</p>
+                            </div>
+                          </a>
+                        {{/homedark-light}}
+                        </script>
+                      </li>
+                      <!-- Home Light -->
+                      <li class="col-span-3 ">
+                        <h6 class="font-medium text-base mb-8"> HOME LIGHT</h6>
+                        <div class="homedark-light"></div>
+                      </li>  
+                      <!-- Show Cases -->
+                      <li class="col-span-3 ">
+                        <h6 class="font-medium text-base mb-8"> SHOWCASES</h6>
+                        <div class="showcase"></div>
+                        <script id="template-showcase" type="text/x-handlebars-template">
+                          {{#showcase}}
+                          <a href={{href}}>
+                            <div class="group flex items-center">
+                              <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                              <p class="py-2.5 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                                {{p}}</p>
+                            </div>
+                          </a>
+                        {{/showcase}}
+                        </script>
+                      </li>  
+                      <!-- Show Cases Light -->
+                      <li class="col-span-3 ">
+                        <h6 class="font-medium text-base mb-8"> SHOWCASES LIGHT</h6>
+                        <div class="showcaselight"></div>
+                        <script id="template-showcaselight" type="text/x-handlebars-template">
+                          {{#showcaselight}}
+                          <a href={{href}}>
+                            <div class="group flex items-center">
+                              <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                              <p class="py-2.5 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                                {{p}}</p>
+                            </div>
+                          </a>
+                        {{/showcaselight}}
+                        </script>
+                      </li>    
                     </div>
-                  </ul>
-                </li>
-                <!-- Pages -->
-                <li class="sub-dropdown cursor-pointer h-full flex items-center px-3 mx-4">
-                  <div class="flex items-center text-sm font-medium tracking-widest">
-                    PAGES 
-                    <div class="ml-1 w-0.5 border-solid border-t-4 border-x-4 border-x-transparent border-black"></div>
                   </div>
-                  <ul class="sub-dropdown-content invisible opacity-0 top-32 transition-all ease-in duration-300 border-2 absolute z-50 font-normal w-64 bg-white border-gray-100 px-3 py-5 text-[13px]  -10 ">
-                    <div class="page" class="pl-5"></div>
-                          <template id="template-page">
-                            {{#page}}
-                            <a href={{href}}>
-                              <div class="group flex items-center">
-                                <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                                <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                                 {{p}}</p>
-                              </div>
-                            </a>
-                          {{/page}}
-                          </template>
-                  </ul>
-                </li>
-                <!-- PORFOLIO -->
-                <li class="sub-dropdown cursor-pointer h-full flex items-center px-3 mx-4">
+                </ul>
+              </li>
+              <!-- Pages -->
+              <li class="sub-dropdown cursor-pointer h-full flex items-center px-3 mx-4">
+                <div class="flex items-center text-sm font-medium tracking-widest">
+                  PAGES 
+                  <div class="ml-1 w-0.5 border-solid border-t-4 border-x-4 border-x-transparent border-black"></div>
+                </div>
+                <ul class="page sub-dropdown-content invisible opacity-0 top-32 transition-all ease-in duration-300 border-2 absolute z-50 font-normal w-64 bg-white border-gray-100 px-3 py-5 text-sm">
+                  <script id="template-page" type="text/x-handlebars-template">
+                    {{#page}}
+                    <a href={{href}}>
+                      <div class="group flex items-center pl-5">
+                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                        <p class="py-2.5 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                        {{p}}</p>
+                      </div>
+                    </a>
+                  {{/page}}
+                  </script>
+                </ul>
+              </li>
+              <!-- PORFOLIO -->
+              <li class="sub-dropdown cursor-pointer h-full flex items-center px-3 mx-4">
                   <div class="flex items-center text-sm font-medium tracking-widest">
                     PORFOLIO 
                     <div class="ml-1 w-0.5 border-solid border-t-4 border-x-4 border-x-transparent border-black"></div>
                   </div>
-                  <ul class="sub-dropdown-content invisible opacity-0 top-32 transition-all ease-in duration-300 border-2 absolute z-50 font-normal w-64 bg-white border-gray-100 px-3 py-5 text-[13px]  -10 ">
+                  <ul class="sub-dropdown-content invisible opacity-0 top-32 transition-all ease-in duration-300 border-2 absolute z-50 font-normal w-64 bg-white border-gray-100 px-3 py-5 text-sm  -10 ">
                     <li class="group flex justify-between text-center items-center">
                       <div class="group flex items-center px-5">
                         <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                        <p class="py-2.5 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
                           Classic Grid</p>
                       </div>
                       <i class="fas fa-angle-right icon-arrow font-black text-sm pr-4"></i>
                       <ul
-                        class="invisible group-hover:visible opacity-0 group-hover:opacity-100 text-left top-1/4 group-hover:top-8 transition-all ease-in duration-300 border-2 right-40 absolute font-normal w-56  left-64 bg-white border-gray-100 px-3 py-5 text-[13px]  ">
-                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-grid-2.html">
-                          <div class="hover-increase-width flex items-center px-5">
-                            <div class="hover-increase-width-content w-0 h-0.5 bg-black transition-all duration-500 ease"></div>
-                            <p class="py-3 text-sm hover:ml-2.5 transition-all duration-500 ease">
-                              Grid 2 colums</p>
-                          </div>
-                        </a>
-                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-grid-3.html">
-                          <div class="hover-increase-width flex items-center px-5">
-                            <div class="hover-increase-width-content w-0 h-0.5 bg-black transition-all duration-500 ease"></div>
-                            <p class="py-3 text-sm hover:ml-2.5 transition-all duration-500 ease">
-                              Grid 3 colums</p>
-                          </div>
-                        </a>
-                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-grid-4.html">
-                          <div class="hover-increase-width flex items-center px-5">
-                            <div class="hover-increase-width-content w-0 h-0.5 bg-black transition-all duration-500 ease"></div>
-                            <p class="py-3 text-sm hover:ml-2.5 transition-all duration-500 ease">
-                              Grid 4 colums</p>
-                          </div>
-                        </a>
+                        class="classicGrid invisible group-hover:visible opacity-0 group-hover:opacity-100 text-left top-1/4 group-hover:top-8 transition-all ease-in duration-300 border-2 right-40 absolute font-normal w-56  left-64 bg-white px-3 py-5 text-sm  ">
+                        <!-- handlebars -->
+                        <script id="template-classicGrid" type="text/x-handlebars-template">
+                          {{#classicGrid}}
+                            <a href="{{href}}">
+                              <div class="py-2.5 flex items-center hover-increase-width pl-5">
+                                <div class="w-0 hover-increase-width-content h-0.5 bg-black transition-all duration-500 ease">
+                                </div>
+                                <p class="hover:ml-2.5 transition-all duration-500 ease">
+                                  {{p}}</p>
+                              </div>
+                            </a>                     
+                          {{/classicGrid}}
+                        </script>
                       </ul>
                     </li>
                     <li class="group flex justify-between text-center items-center">
                       <div class="group flex items-center px-5">
                         <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                        <p class="py-2.5 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
                           Mansory</p>
                       </div>
                       <i class="fas fa-angle-right icon-arrow font-black text-sm pr-4"></i>
                       <ul
-                        class="invisible group-hover:visible opacity-0 group-hover:opacity-100 text-left top-28 group-hover:top-20 transition-all ease-in duration-300 border-2 right-40 absolute font-normal w-56  left-64 bg-white border-gray-100 px-3 py-5 text-[13px]  ">
-                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-masonry-2.html">
-                          <div class="hover-increase-width flex items-center px-5">
-                            <div class="hover-increase-width-content w-0 h-0.5 bg-black transition-all duration-500 ease"></div>
-                            <p class="py-3 text-sm hover:ml-2.5 transition-all duration-500 ease">
-                              Mansory 2 colums</p>
-                          </div>
-                        </a>
-                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-masonry-3.html">
-                          <div class="hover-increase-width flex items-center px-5">
-                            <div class="hover-increase-width-content w-0 h-0.5 bg-black transition-all duration-500 ease"></div>
-                            <p class="py-3 text-sm hover:ml-2.5 transition-all duration-500 ease">
-                              Mansory 3 colums</p>
-                          </div>
-                        </a>
-                        <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-masonry-4.html">
-                          <div class="hover-increase-width flex items-center px-5">
-                            <div class="hover-increase-width-content w-0 h-0.5 bg-black transition-all duration-500 ease"></div>
-                            <p class="py-3 text-sm hover:ml-2.5 transition-all duration-500 ease">
-                              Mansory 4 colums</p>
-                          </div>
-                        </a>
+                        class="mansory invisible group-hover:visible opacity-0 group-hover:opacity-100 text-left top-28 group-hover:top-20 transition-all ease-in duration-300 border-2 right-40 absolute font-normal w-56  left-64 bg-white px-3 py-5 text-sm">
+                        <!-- handlebars -->
+                        <script id="template-mansory" type="text/x-handlebars-template">
+                          {{#mansory}}
+                            <a href="{{href}}">
+                              <div class="py-2.5 flex items-center hover-increase-width pl-5">
+                                <div class="w-0 hover-increase-width-content h-0.5 bg-black transition-all duration-500 ease">
+                                </div>
+                                <p class="hover:ml-2.5 transition-all duration-500 ease">
+                                  {{p}}</p>
+                              </div>
+                            </a>                     
+                          {{/mansory}}
+                        </script> 
                       </ul>
                     </li>
-                    <div class="porfolio" class="pl-5"></div>
-                          <template id="template-porfolio">
-                            {{#porfolio}}
-                            <a href={{href}}>
-                              <div class="group flex items-center">
-                                <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                                <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                                 {{p}}</p>
-                              </div>
-                            </a>
-                          {{/porfolio}}
-                          </template>
-                    
+                    <div class="porfolio pl-5"></div>
+                      <script id="template-porfolio" type="text/x-handlebars-template">
+                        {{#porfolio}}
+                        <a href={{href}}>
+                          <div class="group flex items-center">
+                            <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                            <p class="py-2.5 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                              {{p}}</p>
+                          </div>
+                        </a>
+                      {{/porfolio}}
+                      </script>
                 </ul>
               </li>
               <!-- BLOGS -->
@@ -234,20 +201,18 @@
                   <div class="ml-1 w-0.5 border-solid border-t-4 border-x-4 border-x-transparent border-black"></div>
                 </div>
                 <ul
-                  class="sub-dropdown-content invisible opacity-0 top-32 transition-all ease-in duration-300 border-2 absolute z-50 font-normal w-64 bg-white border-gray-100 px-3 py-5 text-[13px]  -10 ">
-                  <div class="blog" class="pl-5"></div>
-                          <template id="template-blog">
-                            {{#blog}}
-                            <a href={{href}}>
-                              <div class="group flex items-center">
-                                <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                                <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                                 {{p}}</p>
-                              </div>
-                            </a>
-                          {{/blog}}
-                          </template>
-                  
+                  class="blog sub-dropdown-content invisible opacity-0 top-32 transition-all ease-in duration-300 border-2 absolute z-50 font-normal w-64 bg-white border-gray-100 px-3 py-5 text-sm">
+                  <script id="template-blog" type="text/x-handlebars-template">
+                    {{#blog}}
+                    <a href={{href}}>
+                      <div class="group flex items-center pl-5">
+                        <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
+                        <p class="py-2.5 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                          {{p}}</p>
+                      </div>
+                    </a>
+                  {{/blog}}
+                  </script>
                 </ul>
               </li>
               <!-- SHOP -->
@@ -257,20 +222,18 @@
                   <div class="ml-1 w-0.5 border-solid border-t-4 border-x-4 border-x-transparent border-black"></div>
                 </div>
                 <ul
-                  class="sub-dropdown-content invisible opacity-0 top-32 transition-all ease-in duration-300 border-2 absolute z-50 font-normal w-64 bg-white border-gray-100 px-3 py-5 text-[13px]  -10 ">
-                  <div class="shop" class="pl-5"></div>
-                  <template id="template-shop">
+                  class="shop sub-dropdown-content invisible opacity-0 top-32 transition-all ease-in duration-300 border-2 absolute z-50 font-normal w-64 bg-white border-gray-100 px-3 py-5 text-sm">
+                  <script id="template-shop" type="text/x-handlebars-template">
                     {{#shop}}
                     <a href={{href}}>
-                      <div class="group flex items-center">
+                      <div class="group flex items-center pl-5">
                         <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                        <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                         {{p}}</p>
+                        <p class="py-2.5 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
+                        {{p}}</p>
                       </div>
                     </a>
                   {{/shop}}
-                  </template>
-                 
+                  </script>
                 </ul>
               </li>
 
@@ -296,7 +259,7 @@
             </div>
           </div>
           <div id="search-container"
-            class="absolute flex invisible opacity-0 w-64 top-28 right-0 p-4 backdrop-blur-sm transition-all ease-in duration-300">
+            class="absolute hidden lg:flex invisible opacity-0 w-64 top-28 right-0 p-4 backdrop-blur-sm transition-all ease-in duration-300">
             <input type="text" placeholder="Search" class="rounded-md pl-4 flex-1 text-sm outline-none border">
 
             <button type="button"
@@ -314,7 +277,7 @@
 
         </div>
       </div>
-    </div>
+  </div>
     <!-- Dropdown menu -->
 
     <!-- navbar Responsive -->
@@ -331,82 +294,37 @@
           <ul id="Home" class="handle-content bg-white overflow-hidden h-0">
             <!-- HOME DARK  -->
             <div class="mx-0.5">
-              <div class="py-4 mt-4 px-8 border-b bg-white"> HOME DARK</div>
-              <ul class="px-4 pt-3 mx-4 font-light leading-loose overflow-hidden">
-                <div class="homedark"></div>
-                <template id="template-homedark-mb">
-                  {{#homedark-mb}}
-                  <a href={{href}}>
-                    <div class="group flex items-center">
-                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                      <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                       {{p}}</p>
-                    </div>
-                  </a>
-                {{/homedark-mb}}
-                </template>
-                
+              <div class="py-4 mt-4 px-8 border-b bg-white text-sm"> HOME DARK</div>
+              <!-- handlebars -->
+              <ul class="homedark-light px-4 pt-3 mx-4 font-light leading-loose overflow-hidden">
               </ul>
             </div>
             <!-- HOME LIGHT  -->
             <div class="mx-0.5">
-              <div class="py-4 mt-4 px-8 border-b bg-white"> HOME LIGHT</div>
-              <ul class="px-4 pt-3 mx-4 font-light leading-loose overflow-hidden">
-                <div class="homelight"></div>
-                <template id="template-homelight">
-                  {{#homelight}}
-                  <a href={{href}}>
-                    <div class="group flex items-center">
-                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                      <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                       {{p}}</p>
-                    </div>
-                  </a>
-                {{/homelight}}
-                </template>
+              <div class="py-4 mt-4 px-8 border-b bg-white text-sm"> HOME LIGHT</div>
+              <!-- handlebars -->
+              <ul class="homedark-light px-4 pt-3 mx-4 font-light leading-loose overflow-hidden">
               </ul>
             </div>
             <!-- SHOWCASES -->
             <div class="mx-0.5">
-              <div class="py-4 mt-4 px-8 border-b bg-white"> SHOWCASES</div>
-              <ul class="px-4 pt-3 mx-4 font-light leading-loose overflow-hidden">
-                <div class="showcase"></div>
-                <template id="template-showcase">
-                  {{#showcase}}
-                  <a href={{href}}>
-                    <div class="group flex items-center">
-                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                      <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                       {{p}}</p>
-                    </div>
-                  </a>
-                {{/showcase}}
-                </template>
+              <div class="py-4 mt-4 px-8 border-b bg-white text-sm"> SHOWCASES</div>
+              <!-- handlebars -->
+              <ul class="showcase px-4 pt-3 mx-4 font-light leading-loose overflow-hidden">
               </ul>
             </div>
             <!-- SHOWCASES LIGHT -->
             <div class="mx-0.5">
-              <div class="py-4 mt-4 px-8 border-b bg-white"> SHOWCASES LIGHT</div>
-              <ul class="px-4 py-3 mx-4 font-light leading-loose overflow-hidden">
-                <div class="showcaselight"></div>
-                <template id="template-showcaselight">
-                  {{#showcaselight}}
-                  <a href={{href}}>
-                    <div class="group flex items-center">
-                      <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                      <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                       {{p}}</p>
-                    </div>
-                  </a>
-                {{/showcaselight}}
-                </template>
+              <div class="py-4 mt-4 px-8 border-b bg-white text-sm"> SHOWCASES LIGHT</div>
+              <!-- handlebars -->
+              <ul class="showcaselight px-4 py-3 mx-4 font-light leading-loose overflow-hidden">
               </ul>
             </div>
           </ul>
         </li>
         <!-- Pages -->
         <li>
-          <div id="Pages" class="handle-collapse cursor-pointer border border-t-0  py-5">
+          <div id="Pages" class="handle-collapse cursor-pointer border border-t-0 py-5">
             <div class="px-3 mx-4 flex items-center text-sm font-medium tracking-widest">
               PAGES
               <div class="ml-1 w-0.5 border-solid border-t-4 border-x-4 border-x-transparent border-black"></div>
@@ -414,19 +332,8 @@
           </div>
 
           <div id="Pages" class="handle-content overflow-hidden h-0">
-            <ul class="font-light py-3 bg-white leading-loose pl-8 mx-0.5">
-              <div class="page"></div>
-              <template id="template-page">
-                {{#page}}
-                <a href={{href}}>
-                  <div class="group flex items-center">
-                    <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                    <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                     {{p}}</p>
-                  </div>
-                </a>
-              {{/page}}
-              </template>
+            <!-- handlebars -->
+            <ul class="page font-light py-3 bg-white leading-loose pl-3 mx-0.5">
             </ul>
           </div>
         </li>
@@ -441,98 +348,35 @@
           <div id="PORFOLIO" class="handle-content overflow-hidden h-0">
             <ul class="font-light py-3 bg-white leading-loose pl-8 mx-0.5">
               <li class="group">
-                <div class="py-1.5 flex items-center justify-between">
+                <div class="py-2.5 flex items-center justify-between pr-7">
                   <div class="flex items-center">
                     <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                    <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                    <p class="group-hover:ml-2.5 transition-all duration-500 ease text-sm font-light">
                       Classic Grid</p>
                   </div>
-                  <i class="fas fa-angle-right icon-arrow font-black text-sm pr-7"></i>
+                  <i class="fas fa-angle-right icon-arrow font-black text-sm"></i>
                 </div>
+                <!-- handlebars -->
                 <div
-                  class="invisible group-hover:visible opacity-0 group-hover:opacity-100 group-hover:ml-6 h-0 group-hover:h-full transition-all duration-300 ease">
-                  <ul class="pl-7 border mr-10 leading-loose py-5">
-                    <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-grid-2.html">
-                      <div class="py-2 flex items-center hover-increase-width">
-                        <div class="w-0 hover-increase-width-content h-0.5 bg-black transition-all duration-500 ease">
-                        </div>
-                        <p class="font-normal hover:ml-2.5 transition-all duration-500 ease">
-                          Grid 2 Columns</p>
-                      </div>
-                    </a>
-                    <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-grid-3.html">
-                      <div class="py-2 flex items-center hover-increase-width">
-                        <div class="w-0 hover-increase-width-content h-0.5 bg-black transition-all duration-500 ease">
-                        </div>
-                        <p class="font-normal hover:ml-2.5 transition-all duration-500 ease">
-                          Grid 3 Columns</p>
-                      </div>
-                    </a>
-                    <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-grid-4.html">
-                      <div class="py-2 flex items-center hover-increase-width">
-                        <div class="w-0 hover-increase-width-content h-0.5 bg-black transition-all duration-500 ease">
-                        </div>
-                        <p class="font-normal hover:ml-2.5 transition-all duration-500 ease">
-                          Grid 4 Columns</p>
-                      </div>
-                    </a>
-                  </ul>
+                  class="classicGrid border-2 text-sm font-light invisible group-hover:visible opacity-0 group-hover:opacity-100 group-hover:ml-6 mr-7 h-0 group-hover:h-full transition-all duration-300 ease">
                 </div>
               </li>
               <li class="group">
-                <div class="py-1.5 flex items-center justify-between">
+                <div class="py-2.5 flex items-center justify-between">
                   <div class="flex items-center">
                     <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                    <p class="font-normal group-hover:ml-2.5 transition-all duration-500 ease">
+                    <p class="text-sm font-light group-hover:ml-2.5 transition-all duration-500 ease">
                       Mansory</p>
                   </div>
                   <i class="fas fa-angle-right icon-arrow font-black text-sm pr-7"></i>
                 </div>
+                <!-- handlebars -->
                 <div
-                  class="invisible group-hover:visible opacity-0 group-hover:opacity-100 group-hover:ml-6 h-0 group-hover:h-full transition-all duration-300 ease">
-                  <ul class="pl-7 border mr-10 leading-loose py-5">
-                    <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-masonry-2.html">
-                      <div class="py-2 flex items-center hover-increase-width">
-                        <div class="w-0 hover-increase-width-content h-0.5 bg-black transition-all duration-500 ease">
-                        </div>
-                        <p class="font-normal hover:ml-2.5 transition-all duration-500 ease">
-                          Mansory 2 Columns</p>
-                      </div>
-                    </a>
-                    <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-masonry-3.html">
-                      <div class="py-2 flex items-center hover-increase-width">
-                        <div class="w-0 hover-increase-width-content h-0.5 bg-black transition-all duration-500 ease">
-                        </div>
-                        <p class="font-normal hover:ml-2.5 transition-all duration-500 ease">
-                          Mansory 3 Columns</p>
-                      </div>
-                    </a>
-                    <a href="https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-masonry-4.html">
-                      <div class="py-2 flex items-center hover-increase-width">
-                        <div class="w-0 hover-increase-width-content h-0.5 bg-black transition-all duration-500 ease">
-                        </div>
-                        <p class="font-normal hover:ml-2.5 transition-all duration-500 ease">
-                          Mansory 4 Columns</p>
-                      </div>
-                    </a>
-                  </ul>
+                  class="text-sm font-light mansory border-2 invisible group-hover:visible opacity-0 group-hover:opacity-100 group-hover:ml-6 mr-7 h-0 group-hover:h-full transition-all duration-300 ease">
                 </div>
               </li>
-
+              <!-- handlebars -->
               <div class="porfolio"></div>
-              <template id="template-porfolio">
-                {{#porfolio}}
-                <a href={{href}}>
-                  <div class="group flex items-center">
-                    <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                    <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                     {{p}}</p>
-                  </div>
-                </a>
-              {{/porfolio}}
-              </template>
-
-              </a>
             </ul>
           </div>
         </li>
@@ -545,21 +389,8 @@
               <div class="ml-1 w-0.5 border-solid border-t-4 border-x-4 border-x-transparent border-black"></div>
             </div>
           </div>
-
           <div id="Blog" class="handle-content overflow-hidden h-0">
-            <ul class="font-light py-3 bg-white leading-loose pl-8 mx-0.5">
-              <div class="blog"></div>
-              <template id="template-blog">
-                {{#blog}}
-                <a href={{href}}>
-                  <div class="group flex items-center">
-                    <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                    <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                     {{p}}</p>
-                  </div>
-                </a>
-              {{/blog}}
-              </template>
+            <ul class="blog font-light py-3 bg-white leading-loose pl-3 mx-0.5">
             </ul>
           </div>
         </li>
@@ -573,19 +404,7 @@
           </div>
 
           <div id="Shop" class="handle-content overflow-hidden h-0">
-            <ul class="font-light py-3 bg-white leading-loose pl-8 mx-0.5">
-              <div class="shop"></div>
-              <template id="template-shop">
-                {{#shop}}
-                <a href={{href}}>
-                  <div class="group flex items-center">
-                    <div class="w-0 group-hover:w-3 h-0.5 bg-black transition-all duration-500 ease"></div>
-                    <p class="py-3 text-sm group-hover:ml-2.5 transition-all duration-500 ease">
-                     {{p}}</p>
-                  </div>
-                </a>
-              {{/shop}}
-              </template>
+            <ul class="shop font-light py-3 bg-white leading-loose pl-3 mx-0.5">
             </ul>
           </div>
         </li>
@@ -611,7 +430,7 @@
         class="font-epilogue h-fit bg-[url('https://ui-themez.smartinnovates.net/items/geekfolio/light/assets/imgs/patterns/graph.png')] bg-contain bg-no-repeat lg:pb-52 xl:pb-0">
         <div class="pt-44">
           <div class="px-4 sm:px-10 md:mx-11 md:px-4 lg:pr-0 lg:mr-0">
-            <div class="flex justify-between">
+            <div class="flex justify-between wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms"> 
               <h1
                 class="text-4xl md:text-6xl xl:text-8xl font-bold mb-2 leading-snug md:leading-normal tracking-wider md:max-w-2xl xl:max-w-5xl xl:pl-8 xl:pr-16">
                 HIGH END
@@ -648,7 +467,7 @@
             </div>
             <div class="mt-4">
               <div class="lg:flex block">
-                <div class="lg:basis-1/3 lg:pl-10 lg:max-w-72 xl:max-w-lg xl:ml-24 xl:px-6 xl:mr-1">
+                <div class="lg:basis-1/3 lg:pl-10 lg:max-w-72 xl:max-w-lg xl:ml-24 xl:px-6 xl:mr-1 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms">
                   <div class="text">
                     <p class="text-base font-light text-gray-500 xl:leading-loose">Through our years of experience,
                       we've also learned that while each
@@ -685,7 +504,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="lg:basis-2/3 mt-28 lg:mt-10 lg:ml-10 xl:m-0">
+                <div class="lg:basis-2/3 mt-28 lg:mt-10 lg:ml-10 xl:m-0 wow slideInRight" data-wow-duration="1200ms">
                   <img src="/images/14.jpg" alt="1" class="object-cover w-full h-96 sm:w-full ">
                 </div>
               </div>
@@ -700,25 +519,25 @@
       <div class="mb-20 px-3 sm:px-9 md:px-14 lg:px-9 xl:px-24">
         <div class="px-0.5">
           <div>
-            <h6 class="mb-4 w-36 h-9 border border-gray-900 rounded-full text-xs flex items-center justify-center">OUR
+            <h6 class="mb-4 w-36 h-9 border border-gray-900 rounded-full text-xs flex items-center justify-center wow fadeIn" data-wow-duration="1200ms">OUR
               BENEFITS</h6>
             <div class="block lg:flex lg:justify-between xl:grid xl:grid-cols-2">
-              <h2>
+              <h2 class="wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms">
                 <span
-                  class="text-3xl md:text-4xl lg:text-5xl lg:leading-tight lg:max-w-96 md:leading-snug font-semibold text-gray-900">Our
-                  Team of Dedicated Digital Professionals.</span>
+                  class="text-3xl md:text-4xl lg:text-5xl lg:leading-tight lg:max-w-96 md:leading-snug font-semibold text-gray-900">
+                  Our Team of Dedicated Digital Professionals.</span>
               </h2>
               <div class="px-0.5 lg:px-0">
                 <div class="lg:ml-40 xl:ml-32 xl:-mt-10 lg:relative">
                   <p class="leading-loose sm:leading-10 lg:leading-7 mt-2">
-                    <span class="text-gray-500 text-base font-light inline-block leading-7">Through our years of
+                    <span class="text-gray-500 text-base font-light inline-block leading-7 wow fadeInUp" data-wow-duration="1200ms">Through our years of
                       experience, we’ve also learned that while</span>
-                    <span class="text-gray-500 text-base font-light inline-block leading-7">each channel has its own set
+                    <span class="text-gray-500 text-base font-light inline-block leading-7 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms">each channel has its own set
                       of advantages, they all work best</span>
-                    <span class="text-gray-500 text-base font-light inline-block leading-7">when strategically paired
+                    <span class="text-gray-500 text-base font-light inline-block leading-7 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="600ms">when strategically paired
                       with other channels.</span>
                   </p>
-                  <div class="mt-10">
+                  <div class="mt-10 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="600ms">
                     <a href="blog-classic.html"
                       class="w-12 h-12 bg-gray-200 rounded-full text-sm font-light flex items-center">
                       <span class="absolute left-9 sm:left-14 md:left-20 lg:left-6 flex items-center">View All Our News
@@ -742,18 +561,18 @@
       <div class="w-full sm:px-14 md:px-32 lg:px-24 xl:px-32 lg:grid lg:grid-cols-2">
         <div class="mb-24 lg:mb-10 flex">
           <div class="relative w-full lg:h-96 xl:h-full">
-            <img src="/images/01.jpg" alt="" class="w-3/4 h-full">
+            <img src="/images/01.jpg" alt="" class="w-3/4 h-full wow fadeInLeft" data-wow-duration="1200ms" data-wow-delay="600ms">
             <div
-              class="absolute w-52 xl:w-64 border-t-8 border-l-8 border-white -bottom-7 right-0 lg:-right-4 xl:-right-10">
+              class="absolute w-52 xl:w-64 border-t-8 border-l-8 border-white -bottom-7 right-0 lg:-right-4 xl:-right-10 wow fadeInLeft" data-wow-duration="1200ms" data-wow-delay="600ms">
               <img src="/images/1.jpg" alt="">
             </div>
           </div>
         </div>
         <div class="-mt-8 xl:mt-14 ml-7">
-          <h2 class="text-3xl md:text-4xl lg:-ml-2 lg:text-5xl lg:leading-tight font-semibold text-gray-900">Unlock
+          <h2 class="text-3xl md:text-4xl lg:-ml-2 lg:text-5xl lg:leading-tight font-semibold text-gray-900 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="600ms">Unlock
             Revenue Growth for Your Business.</h2>
           <div class="flex justify-center flex-col pl-8 pr-8 mt-24 sm:pl-24 sm:pr-0">
-            <div class="flex items-center justify-center mb-12">
+            <div class="flex items-center justify-center mb-12 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="600ms">
               <img src="/images/0.png" alt="" class="w-12 h-12 mr-8">
               <div class="flex flex-col">
                 <h6 class="text-base md:text-xl font-semibold text-gray-900 sm:mb-3">High Standerd</h6>
@@ -762,7 +581,7 @@
                 </p>
               </div>
             </div>
-            <div class="flex items-center justify-center">
+            <div class="flex items-center justify-center wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms">
               <img src="/images/1.png" alt="" class="w-12 h-12 mr-8">
               <div class="flex flex-col">
                 <h6 class="text-base md:text-xl font-semibold text-gray-900 sm:mb-3">Ease of Communication</h6>
@@ -775,27 +594,25 @@
         </div>
       </div>
     </section>
-    <!-- scroll section later-->
+    <!-- infinite rotate-->
     <section
       class="py-12 max-h-40 border-y bg-inherit border-gray-300 overflow-hidden font-epilogue -rotate-2 relative z-20">
       <div
-        class="flex max-h-18 md:max-h-8xl items-center [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
-        <div class="scrollsection flex flex-nowrap items-center justify-between animate-infinitescroll">
-        
-                          <template id="template-scrollsection">
-                            {{#scrollsection}}                     
-                            <div class="flex items-center justify-center px-8 text-nowrap">
-                              <h4 class="text-4xl md:text-7xl font-semibold">{{h4}}</h4>
-                              <span class="text-5xl font-bold text-stroke ml-12 mt-6">*</span>
-                            </div>
-                          {{/scrollsection}}
-                          </template>
+        class="flex max-h-18 md:max-h-8xl items-center [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]"> 
+        <script id="template-infiniteRotate" type="text/x-handlebars-template">
+          {{#infiniteRotate}}                     
+            <div class="flex items-center justify-center px-8 text-nowrap">
+              <h4 class="text-4xl md:text-7xl font-semibold">{{h4}}</h4>
+              <span class="text-5xl font-bold text-stroke ml-12 mt-6">*</span>
+            </div>
+          {{/infiniteRotate}}
+        </script>
+        <div class="infiniteRotate flex flex-nowrap items-center justify-between animate-infinitescroll">
         </div>
-        <div class="scrollsection flex flex-nowrap items-center justify-between animate-infinitescroll">
-</div>
       </div>
     </section>
-    <div class="w-full h-fit py-16 border-y border-gray-400 flex items-center justify-around">
+    <!-- label -->
+    <div class="w-full h-fit py-16 px-20 md:px-28 border-y border-gray-400 flex items-center justify-around">
       <div>
         <a href="#">
           <img src="/images/01.png" alt="1" class="w-24 h-7">
@@ -828,20 +645,20 @@
         <div class="mb-20 lg:flex lg:justify-between">
           <div class="px-1 sm:px-0">
             <h6
-              class="px-7 py-2 border rounded-full border-gray-900 w-48 h-9 text-xs text-gray-900 flex items-center justify-center mb-4 cursor-pointer">
+              class="px-7 py-2 border rounded-full border-gray-900 w-48 h-9 text-xs text-gray-900 flex items-center justify-center mb-4 cursor-pointer wow fadeIn" data-wow-duration="1200ms">
               FEATURED SERVICES</h6>
-            <h2 class="mb-5 lg:mb-0 text-3xl md:text-4xl lg:text-5xl text-gray-900 font-semibold">Our Services</h2>
+            <h2 class="mb-5 lg:mb-0 text-3xl md:text-4xl lg:text-5xl text-gray-900 font-semibold wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms">Our Services</h2>
           </div>
-          <div class="px-1 lg:max-w-80">
-            <p class="text-base text-gray-500 font-light xl:mt-10">Nemo enim ipsam voluptatem quia voluptas sit odit aut
+          <div class="px-1 lg:w-80 xl:w-96">
+            <p class="text-base text-gray-500 font-light xl:mt-10 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms">Nemo enim ipsam voluptatem quia voluptas sit odit aut
               fugit, sed quia.</p>
           </div>
         </div>
         <!-- handlebars -->
-        <template id="template-1">
+        <script id="template-ourservices" type="text/x-handlebars-template">
           <ul class="px-1 lg:flex lg:justify-between lg:gap-7">
             {{#ourservices}}
-            <li class="px-7 py-12 mb-14 md:p-14 border border-gray-300 rounded-md">
+            <li class="px-7 py-12 mb-14 md:p-14 border border-gray-300 rounded-md wow fadeInLeft" data-wow-duration="1200ms" data-wow-delay="400ms">
               <div class="mb-10">
                 <img src="{{src}}" alt="" class="w-12 h-12">
               </div>
@@ -868,21 +685,21 @@
             </li>
             {{/ourservices}}
           </ul>
-        </template>
+        </script>
         <div class="ourservices">
         </div>
       </div>
     </section>
     <!-- Scroll section image -->
-    <section class="pb-10 font-epilogue">
-      <div  class=" scrollimg max-w-full flex flex-nowrap px-5 md:px-16 lg:px-20 mousewheelSwiper">
-        <template id="template-3">
-          <div class="swiper-wrapper">
+    <section class="pb-10 lg:pb-0 font-epilogue">
+      <div id="container-swiper-wrapper" class="scrollimg max-w-full lg:flex lg:flex-nowrap px-5 md:px-8 lg:px-28 mousewheelSwiper">
+        <script id="template-scrollimg" type="text/x-handlebars-template">
+          <div id="oke" class="lg:flex w-full">
             {{#scrollimg}}
-            <div class="cursor-pointer swiper-slide xl:max-w-2xl lg:max-w-md lg:max-h-96 md:max-w-3xl">
-              <div>
+            <div class="cursor-pointer mb-10 lg:mb-0 lg:mr-20 xl:mr-28 swiper-slide xl:max-w-2xl lg:max-w-md lg:max-h-96">
+              <div class="w-full">
                 <img src="{{src}}" alt="1"
-                  class="xl:w-[645px] xl:h-[444px] lg:w-[430px] lg:h-[296px] md:w-[738px] md:h-[507px] w-[360px] h-[248px] object-cover">
+                  class="w-full h-full object-contain">
                  </div>
               <div class="flex justify-between">
                 <div class="leading-relaxed">
@@ -896,13 +713,14 @@
             </div>
             {{/scrollimg}}
           </div>
-        </template>
+        </script>
       </div>
     </section>
-    <section class="py-28 font-epilogue">
-      <div class="px-3 sm:px-9 md:px-14 xl:px-28">
+    <!-- infinite label -->
+    <section class="pb-28 pt-10 font-epilogue">
+      <div class="px-9 sm:px-14 md:px-20 xl:px-28">
         <!-- infinity roll -->
-        <div class="max-h-40 py-10 border-y bg-inherit border-gray-300 overflow-hidden mb-20">
+        <div class="max-h-40 py-10 border-y bg-inherit border-gray-300 overflow-hidden mb-20 xl:mt-32">
           <div class="flex max-h-14 items-center px-4">
             <div class="flex flex-nowrap items-center justify-between animate-infinitescroll">
               <div class="flex items-center justify-center px-8 text-nowrap">
@@ -950,46 +768,39 @@
             </div>
           </div>
         </div>
-        <div class="lg:flex lg:justify-between xl:grid xl:grid-cols-2">
+        <div class="lg:flex lg:justify-between xl:grid xl:grid-cols-2 xl:px-3">
           <div class="px-1 sm:px-0 lg:max-w-sm xl:max-w-lg ">
-            <div class=" lg:pl-16">
+            <div class="">
               <div class="mb-20">
                 <h6
-                  class="px-7 py-2 border rounded-full border-gray-900 w-28 h-9 text-xs text-gray-900 flex items-center justify-center mb-4 cursor-pointer">
+                  class="px-7 py-2 border rounded-full border-gray-900 w-28 h-9 text-xs text-gray-900 flex items-center justify-center mb-4 cursor-pointer wow fadeIn" data-wow-duration="1200ms">
                   SERVICES</h6>
-                <p class="text-base text-gray-500 ">We help you to go online and increase your conversion rate Better
+                <p class="text-base text-gray-500 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms">We help you to go online and increase your conversion rate Better
                   design for your digital products. </p>
               </div>
               <div class="mb-12">
-                <ul>
-                  <li class="flex items-center py-4 mt-4 border-b border-gray-300 text-gray-900 text-4xl font-medium">
-                    <span class="mr-7 text-xl">01</span>
-                    UI/UX Design
-                  </li>
-                  <li class="flex items-center py-4 mt-4 border-b border-gray-300 text-gray-900 text-4xl font-medium">
-                    <span class="mr-7 text-xl">02</span>
-                    Branding
-                  </li>
-                  <li class="flex items-center py-4 mt-4 border-b border-gray-300 text-gray-900 text-4xl font-medium">
-                    <span class="mr-7 text-xl">03</span>
-                    Development
-                  </li>
-                  <li class="flex items-center py-4 mt-4 border-b border-gray-300 text-gray-900 text-4xl font-medium">
-                    <span class="mr-7 text-xl">04</span>
-                    Marketing
-                  </li>
+                <!-- handlebars -->
+                <ul class="services">
+                  <script id="template-services" type="text/x-handlebars-template">
+                    {{#services}}
+                      <li class="flex items-center py-4 mt-4 border-b border-gray-300 text-gray-900 text-4xl font-medium wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms">
+                        <span class="mr-7 text-xl">{{stt}}</span>
+                        {{name}}
+                      </li>
+                    {{/services}}
+                  </script>
                 </ul>
               </div>
             </div>
           </div>
-          <div>
+          <div class="flex justify-center md:block">
             <div class="relative md:flex md:justify-end">
-              <div class="img">
-                <img src="/images/img3.jpg" alt="3"
-                  class="w-96 h-[540px] md:w-[483px] lg:w-80 xl:w-[440px] object-cover">
+              <div class="flex justify-end wow fadeInRight" data-wow-duration="1200ms" data-wow-delay="400ms">
+                <img src="https://ui-themez.smartinnovates.net/items/geekfolio/light/assets/imgs/sass-img/serv/4.jpg" alt="3"
+                  class="w-10/12 lg:w-2/3 object-cover">
               </div>
               <div
-                class="px-8 py-10 xl:px-10 xl:py-16 bg-white h-96 w-80 md:w-[483px] md:h-96 lg:w-80 lg:h-[443px] xl:w-[440px] xl:h-96 absolute -bottom-0.5 left-0 lg:-left-32 xl:left-0">
+                class="px-8 py-10 xl:px-10 xl:py-16 bg-white h-96 w-80 xl:h-96 absolute -bottom-0.5 left-0 lg:left-10 xl:left-0 wow fadeInRight" data-wow-duration="1200ms" data-wow-delay="400ms">
                 <div class="mb-10">
                   <img src="/images/0.png" alt="0" class="w-16 h-16">
                 </div>
@@ -1018,30 +829,45 @@
             <div class="mb-20">
               <div class="flex flex-col items-center justify-center">
                 <h6
-                  class="px-7 py-2 border rounded-full border-gray-900 w-40 h-9 text-xs text-gray-900 font-medium flex items-center justify-center mb-4 cursor-pointer">
+                  class="px-7 py-2 border rounded-full border-gray-900 w-40 h-9 text-xs text-gray-900 font-medium flex items-center justify-center mb-4 cursor-pointer
+                  wow fadeIn" data-wow-duration="1200ms">
                   TESTIMONIALS</h6>
-                <h2 class="text-gray-900 text-3xl md:text-4xl lg:text-5xl font-semibold">What People Says?</h2>
+                <h2 class="text-gray-900 text-3xl md:text-4xl lg:text-5xl font-semibold wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="600ms">What People Says?</h2>
               </div>
             </div>
-            <div class="lg:flex lg:justify-between">
-              <div
-                class="mr-64 w-32 h-32 lg:w-80 lg:h-80 rounded-full border border-gray-900 flex items-center justify-center mb-8 relative">
+            <div class="lg:flex lg:justify-between wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms">
+              <div class="basis-2/5 mr-20">
                 <div
-                  class="w-24 h-24 lg:w-36 lg:h-36 bg-gray-100 rounded-full flex items-center justify-center absolute z-20 lg:left-20">
-                  <img src="/images/quote.png" alt="q" class="w-12 h-12">
-                </div>
-                <div class="lg:block hidden lg:w-80 lg:h-80 lg:rounded-full lg:overflow-hidden  absolute z-10 left-32">
-                  <img src="/images/sq1.jpg" alt="1" class=" object-cover">
+                  class=" w-32 h-32 lg:w-80 lg:h-80 rounded-full border border-gray-900 flex items-center justify-center mb-8 relative">
+                  <div
+                    class="w-24 h-24 lg:w-36 lg:h-36 bg-gray-100 rounded-full flex items-center justify-center absolute z-20 lg:left-20">
+                    <img src="/images/quote.png" alt="q" class="w-12 h-12">
+                  </div>
+                  <div class="lg:block hidden lg:w-80 lg:h-80 lg:rounded-full lg:overflow-hidden  absolute z-10 left-32">
+                    <img src="/images/sq1.jpg" alt="1" class="object-cover">
+                  </div>
                 </div>
               </div>
               <div class="peoplesays swiper mySwiper basis-3/5 h-full">
                 <!-- handlebars -->
-                <template id="template-2">
+                <script id="template-peoplesays" type="text/x-handlebars-template">
                   <ul class="swiper-wrapper flex flex-nowrap">
                     {{#peoplesays}}
                     <li class="min-w-full swiper-slide">
                       <div class="mb-5">
-                        <span class="flex">
+                        <!-- <template id="template-stars">
+                          {{#stars}}
+                            <svg class="ml-1" width="20px" height="20px" viewBox="0 0 36 36"
+                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                              aria-hidden="true" role="img" class="iconify iconify--twemoji"
+                              preserveAspectRatio="xMidYMid meet">
+                              <path fill="#FFAC33"
+                                d="M27.287 34.627c-.404 0-.806-.124-1.152-.371L18 28.422l-8.135 5.834a1.97 1.97 0 0 1-2.312-.008a1.971 1.971 0 0 1-.721-2.194l3.034-9.792l-8.062-5.681a1.98 1.98 0 0 1-.708-2.203a1.978 1.978 0 0 1 1.866-1.363L12.947 13l3.179-9.549a1.976 1.976 0 0 1 3.749 0L23 13l10.036.015a1.975 1.975 0 0 1 1.159 3.566l-8.062 5.681l3.034 9.792a1.97 1.97 0 0 1-.72 2.194a1.957 1.957 0 0 1-1.16.379z">
+                              </path>
+                            </svg>
+                          {{/stars}}
+                        </template> -->
+                        <div class="stars flex">
                           <svg class="ml-1" width="20px" height="20px" viewBox="0 0 36 36"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             aria-hidden="true" role="img" class="iconify iconify--twemoji"
@@ -1082,7 +908,7 @@
                               d="M27.287 34.627c-.404 0-.806-.124-1.152-.371L18 28.422l-8.135 5.834a1.97 1.97 0 0 1-2.312-.008a1.971 1.971 0 0 1-.721-2.194l3.034-9.792l-8.062-5.681a1.98 1.98 0 0 1-.708-2.203a1.978 1.978 0 0 1 1.866-1.363L12.947 13l3.179-9.549a1.976 1.976 0 0 1 3.749 0L23 13l10.036.015a1.975 1.975 0 0 1 1.159 3.566l-8.062 5.681l3.034 9.792a1.97 1.97 0 0 1-.72 2.194a1.957 1.957 0 0 1-1.16.379z">
                             </path>
                           </svg>
-                        </span>
+                        </div>
                       </div>
                       <div class="mb-10">
                         <h5 class="text-lg md:text-2xl font-normal text-gray-900 leading-7">I have been hiring people in
@@ -1093,7 +919,7 @@
                         <div>
                           <img src="{{src}}" alt="1" class="w-16 h-16 rounded-full object-cover">
                         </div>
-                        <div class="ml-[30px] flex flex-col">
+                        <div class="ml-8 flex flex-col">
                           <h6 class="mb-2 text-base text-gray-900 font-semibold">{{name}}</h6>
                           <span class="text-sm text-gray-900 font-normal">{{position}}</span>
                         </div>
@@ -1126,12 +952,12 @@
                       </svg>
                     </div>
                   </div>
-                </template>
+                </script>
               </div>
             </div>
           </div>
         </div>
-        <div class="mt-20 pt-20 border-t border-gray-200 sm:grid sm:grid-cols-2 lg:grid lg:grid-cols-4">
+        <div class="mt-20 pt-20 border-t border-gray-200 sm:grid sm:grid-cols-2 lg:grid lg:grid-cols-4 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms">
           <div class="px-1 text-gray-900 flex flex-col justify-center">
             <h2 class="text-8xl md:text-9xl font-extrabold text-stroke mb-6 lg:mb-7 flex items-center">16</h2>
             <h6 class="mb-12 lg:mb-2 text-base text-gray-900 font-medium">Years of Experience</h6>
@@ -1158,20 +984,21 @@
         </div>
       </div>
     </section>
+    <!-- Latest News -->
     <section class="py-32 h-fit font-epilogue">
       <div class="px-3 sm:px-9 md:px-14 lg:px-9 xl:px-28">
         <div class="mb-20">
           <div class="lg:flex lg:justify-between lg:relative">
             <div class="px-1">
               <h6
-                class="px-8 py-2 border rounded-full border-black-100 w-32 h-9 text-xs text-black-100 flex items-center justify-center mb-4 cursor-pointer">
-                OUR BLOG</h6>
-              <h2 class="text-3xl lg:text-5xl md:text-3xl font-semibold mb-2 text-black-100">Latest News.</h2>
+                  class="px-7 py-2 border rounded-full border-gray-900 w-fit h-9 text-xs text-gray-900 flex items-center justify-center mb-4 cursor-pointer wow fadeIn" data-wow-duration="1200ms">
+                  OUR BLOG</h6>
+              <h2 class="text-3xl lg:text-5xl md:text-3xl font-semibold mb-2 text-black-100 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms">Latest News.</h2>
             </div>
             <div class="px-1 mt-5">
-              <a href="blog-classic.html"
-                class="w-12 h-12 bg-gray-200 rounded-full text-black-100 text-sm font-light flex items-center lg:mr-40">
-                <span class="absolute left-9 md:left-20 lg:left-[80%] xl:left-[85%] flex items-center">View All Our News
+              <a href="blog-classic.html" class="flex items-center wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms">
+                <div class="w-12 h-12 bg-gray-200 rounded-full text-black-100 text-sm font-light flex items-center"></div>
+                <span class="text-sm font-light left-9 md:left-20  flex items-center -ml-6">View All Our News
                   <span>
                     <svg width="18px" height="18px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
                       <path fill="#1D1D1D"
@@ -1181,15 +1008,14 @@
                     </svg>
                   </span>
                 </span>
-  
               </a>
             </div>
           </div>
         </div>
-        <template id="template-4">
+        <script id="template-ourblogs" type="text/x-handlebars-template">
           <ul class="px-1 lg:grid lg:grid-cols-2 lg:gap-5">
             {{#ourblogs}}
-            <li class="mb-12">
+            <li class="mb-12 wow fadeIn" data-wow-duration="1200ms" data-wow-delay="600ms">
               <div class="w-full h-fit border border-gray-300 rounded-md sm:grid sm:grid-cols-2">
                 <div class="px-4">
                   <div class="mt-4">
@@ -1214,7 +1040,7 @@
             </li>
             {{/ourblogs}}
           </ul>
-        </template>
+        </script>
         <div class="ourblogs">
         </div>
       </div>
@@ -1228,8 +1054,8 @@
   </div>
 
   <!-- footer -->
-  <div class="mt-24">
-    <div class=" md:mx-8 lg:mx-28 mb-12 px-3  epilogue-font">
+  <div class="mt-24 sm:px-20 md:px-8">
+    <div class=" md:mx-8 mb-12 px-3 epilogue-font">
       <div
         class="md:flex  text-center text-4xl lg:text-7xl font-bold items-center justify-center border rounded-xl p-5 mb-20">
         Let's <br class="sm:hidden">
@@ -1274,8 +1100,8 @@
         </div>
       </div>
     </div>
-    <div class="max-w-7xl mx-auto relative">
-      <div class="-mx-2 h-14 lg:h-20">
+    <div class="max-w-7xl lg:mx-auto relative">
+      <div class="mx-3 md:mx-12 lg:mx-9 xl:-mx-2 h-14 lg:h-20">
         <div class="py-10 md:flex md:justify-between border-t border-gray-300">
           <div class="w-20 lg:w-28 h-6 cursor-pointer">
             <img src="https://ui-themez.smartinnovates.net/items/geekfolio/light/assets/imgs/logo-dark.png" alt="">
@@ -1288,162 +1114,179 @@
     </div>
   </div>
 
-  <!-- handle bars -->
-  <!-- <template id="template-1">
-      <p>Hello, my name is {{name}}. I am from {{hometown}}. I have {{kids.length}} kids:</p>
-      <ul>{{#kids}}<li class="handle-dialog" data-test="{{../datass}}">{{name}} is {{age}}</li>{{/kids}}
-      </ul>
-    </template>
-    <div id="text"></div> -->
+  
+  <!-- handlebars 4 -->
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@4/dist/handlebars.js"></script>
+  <script>
+    // handlebars
+    function handleBars (idTemplate, className) {
+      const temp = document.getElementById(idTemplate);
+      if (temp) {
+        const template = Handlebars.compile(temp.innerHTML);
+        const data = {
+          "ourservices":  [ {"src": "/images/0.png", "span": "Product Design", "h6": "Digital Product Design"},
+                            {"src": "/images/1.png", "span": "Customs Services", "h6": "Branding & Design"},
+                            {"src": "/images/2.png", "span": "Product Development", "h6": "Web Development"}
+                          ],
+          "peoplesays" :  [ {"src": "/images/ceo.jpg", "name": "Leonard Heiser", "position": "CEO"},
+                            {"src": "/images/ceo2.jpg", "name": "Leonard Heiser", "position": "CEO"},
+                          ],
+                          "scrollimg": [
+                            { "src": "/images/sec1.jpg", "span": "WEB DESIGN", "h5": "Color Integration", "h6": "2023" },
+                            { "src": "/images/sec2.jpg", "span": "WEB DESIGN", "h5": "Color Integration", "h6": "2023" },
+                            { "src": "/images/sec3.jpg", "span": "WEB DESIGN", "h5": "Color Integration", "h6": "2023" },
+                            { "src": "/images/sec4.jpg", "span": "WEB DESIGN", "h5": "Color Integration", "h6": "2023" },
+                            { "src": "/images/sec5.jpg", "span": "WEB DESIGN", "h5": "Color Integration", "h6": "2023" },
+                            { "src": "/images/06.jpg", "span": "WEB DESIGN", "h5": "Color Integration", "h6": "2023" }
+                          ],
+        "ourblogs": [
+                      { "src": "/images/h1.jpg", "span": "AUGUST 6, 2022", "h5": "Free advertising for your online business." },
+                      { "src": "/images/h4.jpg", "span": "AUGUST 6, 2022", "h5": "Business meeting 2023 in San Francisco." }
+                    ],
+        "homedark-light"    : [ {"p" : "Main Home" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-main.html"},
+                            {"p": "Corporate Bussiness" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-corporate.html"},
+                            {"p": "Home One Page" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-onepage.html"},
+                            {"p": "Digital Agency" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-digital-agency.html"},
+                            {"p": "FreeLancer" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-freelancer.html"},
+                            {"p": "Maketing Agency" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-marketing-agency.html"},
+                            {"p": "Creative Agency" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-creative-agency.html"},
+                            {"p": "Startup Bussiness" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-startup.html"},
+                            {"p": "Archiecture" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-architecture.html"},
+                          ],
+          "showcase"    : [ {"p": " Parallax Slider" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-parallax-slider.html"},
+                            {"p": " Flame Slider" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-frame-slider.html"},
+                            {"p": " Circle Slider" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-circle-slider.html"},
+                            {"p": " Showcase Carousel" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-carousel.html"},
+                            {"p": " Interactive Links1" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-interactive-center-horizontal.html"},
+                            {"p": " Interactive Links2" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-interactive-center.html"},
+                            {"p": " Vertical Parallax" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-parallax.html"},            
+                          ],
+          "showcaselight": [ {"p": " Parallax Slider" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-parallax-slider.html"},
+                            {"p": " Showcase Carousel" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-frame-slider.html"},
+                            {"p": " Interactive Links1" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-interactive-center-horizontal.html"},
+                            {"p": " Interactive Links2" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-interactive-center.html"},
+                            {"p": " Vertical Parallax" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-parallax.html"},            
+                          ],
+          "page":         [ {"p": " About" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-parallax-slider.html"},
+                            {"p": " Service" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-frame-slider.html"},
+                            {"p": "Out Team" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-interactive-center-horizontal.html"},
+                            {"p": " Contact us" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-interactive-center.html"},           
+                          ],
+          "porfolio":      [ {"p": " Portfolio Metro" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-parallax-slider.html"},
+                            {"p": " Modern Grid" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-frame-slider.html"},
+                            {"p": "Project Details 1" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-interactive-center-horizontal.html"},
+                            {"p": " Project Details 2" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-interactive-center.html"},           
+                          ],
+          "blog":      [ {"p": " Blog Standert" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-parallax-slider.html"},
+                            {"p": " Block List" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-frame-slider.html"},
+                            {"p": "Image Out Frame" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-interactive-center-horizontal.html"},
+                            {"p": "Blog Detail" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-interactive-center.html"},           
+                          ],
+          "shop":      [ {"p": " Shop List" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-parallax-slider.html"},
+                            {"p": "Single Product  " , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-frame-slider.html"},
+                            {"p": "Cart" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-interactive-center-horizontal.html"},
+                            {"p": "Check Out" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-interactive-center.html"},           
+                          ],
+          "infiniteRotate": [{"h4":"UI-UX Experience"},
+                            {"h4":"Web Development"},
+                            {"h4":"Digital Marketing"},
+                            {"h4":"Product Design"},
+                            {"h4":"Mobile Solutions"},
+                          ],
+          "classicGrid": [ {"href": "https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-grid-2.html", "p": "Grid 2 Columns"},
+                            {"href": "https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-grid-3.html", "p": "Grid 3 Columns"},
+                            {"href": "https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-grid-4.html", "p": "Grid 4 Columns"}
+                        ] ,
+          "mansory":    [ {"href": "https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-masonry-2.html", "p": "Mansory 2 Columns"},
+                            {"href": "https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-masonry-3.html", "p": "Mansory 3 Columns"},
+                            {"href": "https://ui-themez.smartinnovates.net/items/geekfolio/light/portfolio-masonry-4.html", "p": "Mansory 4 Columns"}
+                        ],
+          "services": [{"stt": "01", "name": "UI/UX Design"}, 
+                        {"stt": "02", "name": "Branding"}, 
+                        {"stt": "03", "name": "Development"}, 
+                        {"stt": "04", "name": "Marketing"},
+                      ]
 
-
-
-    <!-- handlebars 4 -->
-    <script src="https://cdn.jsdelivr.net/npm/handlebars@4/dist/handlebars.js"></script>
-    <script>
-      // handlebars
-      function handleBars (idTemplate, className) {
-        const temp = document.getElementById(idTemplate);
-        if (temp) {
-          const template = Handlebars.compile(temp.innerHTML);
-          const data = {
-            "ourservices":  [ {"src": "/images/0.png", "span": "Product Design", "h6": "Digital Product Design"},
-                              {"src": "/images/1.png", "span": "Customs Services", "h6": "Branding & Design"},
-                              {"src": "/images/2.png", "span": "Product Development", "h6": "Web Development"}
-                            ],
-            "peoplesays" :  [ {"src": "/images/ceo.jpg", "name": "Leonard Heiser", "position": "CEO"},
-                              {"src": "/images/ceo2.jpg", "name": "Leonard Heiser", "position": "CEO"},
-                            ],
-                            "scrollimg": [
-            { "src": "/images/sec1.jpg", "span": "WEB DESIGN", "h5": "Color Integration", "h6": "2023" },
-            { "src": "/images/sec2.jpg", "span": "WEB DESIGN", "h5": "Color Integration", "h6": "2023" },
-            { "src": "/images/sec3.jpg", "span": "WEB DESIGN", "h5": "Color Integration", "h6": "2023" },
-            { "src": "/images/sec4.jpg", "span": "WEB DESIGN", "h5": "Color Integration", "h6": "2023" },
-            { "src": "/images/sec5.jpg", "span": "WEB DESIGN", "h5": "Color Integration", "h6": "2023" },
-            { "src": "/images/06.jpg", "span": "WEB DESIGN", "h5": "Color Integration", "h6": "2023" }
-          ],
-          "ourblogs": [
-            { "src": "/images/h1.jpg", "span": "AUGUST 6, 2022", "h5": "Free advertising for your online business." },
-            { "src": "/images/h4.jpg", "span": "AUGUST 6, 2022", "h5": "Business meeting 2023 in San Francisco." }
-          ],
-          "homedark"    : [ {"p" : "Main Home" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-main.html"},
-                              {"p": "Corporate Bussiness" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-corporate.html"},
-                              {"p": "Home One Page" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-onepage.html"},
-                              {"p": "Digital Agency" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-digital-agency.html"},
-                              {"p": "FreeLancer" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-freelancer.html"},
-                              {"p": "Maketing Agency" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-marketing-agency.html"},
-                              {"p": "Creative Agency" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-creative-agency.html"},
-                              {"p": "Startup Bussiness" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-startup.html"},
-                              {"p": "Archiecture" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-architecture.html"},
-                            ],
-          "homedark-mb"    : [ {"p" : "Main Home" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-main.html"},
-                              {"p": "Corporate Bussiness" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-corporate.html"},
-                              {"p": "Home One Page" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-onepage.html"},
-                              {"p": "Digital Agency" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-digital-agency.html"},
-                              {"p": "FreeLancer" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-freelancer.html"},
-                              {"p": "Maketing Agency" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-marketing-agency.html"},
-                              {"p": "Creative Agency" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-creative-agency.html"},
-                              {"p": "Startup Bussiness" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-startup.html"},
-                              {"p": "Archiecture" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/dark/home-architecture.html"},
-                            ],
-            "homelight"   : [ {"p" : "Main Home" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/light/home-main.html"},
-                              {"p": "Corporate Bussiness" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/light/home-corporate.html"},
-                              {"p": "Home One Page" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/light/home-onepage.html"},
-                              {"p": "Digital Agency" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/light/home-digital-agency.html"},
-                              {"p": "FreeLancer" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/light/home-freelancer.html"},
-                              {"p": "Maketing Agency" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/light/home-marketing-agency.html"},
-                              {"p": "Creative Agency" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/light/home-creative-agency.html"},
-                              {"p": "Startup Bussiness" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/light/home-startup.html"},
-                              {"p": "Archiecture" , "href": "https://ui-themez.smartinnovates.net/items/geekfolio/light/home-architecture.html"},
-                            ] ,
-            "showcase"    : [ {"p": " Parallax Slider" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-parallax-slider.html"},
-                              {"p": " Flame Slider" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-frame-slider.html"},
-                              {"p": " Circle Slider" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-circle-slider.html"},
-                              {"p": " Showcase Carousel" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-carousel.html"},
-                              {"p": " Interactive Links1" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-interactive-center-horizontal.html"},
-                              {"p": " Interactive Links2" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-interactive-center.html"},
-                              {"p": " Vertical Parallax" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/dark/showcase-parallax.html"},            
-                            ],
-            "showcaselight": [ {"p": " Parallax Slider" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-parallax-slider.html"},
-                              {"p": " Showcase Carousel" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-frame-slider.html"},
-                              {"p": " Interactive Links1" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-interactive-center-horizontal.html"},
-                              {"p": " Interactive Links2" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-interactive-center.html"},
-                              {"p": " Vertical Parallax" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-parallax.html"},            
-                            ],
-            "page":         [ {"p": " About" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-parallax-slider.html"},
-                              {"p": " Service" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-frame-slider.html"},
-                              {"p": "Out Team" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-interactive-center-horizontal.html"},
-                              {"p": " Contact us" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-interactive-center.html"},           
-                            ],
-            "porfolio":      [ {"p": " Portfolio Metro" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-parallax-slider.html"},
-                              {"p": " Modern Grid" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-frame-slider.html"},
-                              {"p": "Project Details 1" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-interactive-center-horizontal.html"},
-                              {"p": " Project Details 2" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-interactive-center.html"},           
-                            ],
-            "blog":      [ {"p": " Blog Standert" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-parallax-slider.html"},
-                              {"p": " Block List" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-frame-slider.html"},
-                              {"p": "Image Out Frame" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-interactive-center-horizontal.html"},
-                              {"p": "Blog Detail" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-interactive-center.html"},           
-                            ],
-            "shop":      [ {"p": " Shop List" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-parallax-slider.html"},
-                              {"p": "Single Product  " , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-frame-slider.html"},
-                              {"p": "Cart" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-interactive-center-horizontal.html"},
-                              {"p": "Check Out" , "href":"https://ui-themez.smartinnovates.net/items/geekfolio/light/showcase-interactive-center.html"},           
-                            ],
-            "scrollsection": [{"h4":"UI-UX Experience"},
-            {"h4":"Web Development"},
-            {"h4":"Digital Marketing"},
-            {"h4":"Product Design"},
-            {"h4":"Mobile Solutions"},
-            ]               
-
-          };
-          var elements =  document.querySelectorAll(className)
-          elements.forEach(function(element) {
-      element.innerHTML = template(data);
-    });
-        }
+        };
+        var elements =  document.querySelectorAll(className)
+        elements.forEach(function(element) {
+        element.innerHTML = template(data);
+  });
       }
-      handleBars('template-1', '.ourservices');
-      handleBars('template-2', '.peoplesays');
-      handleBars('template-3', '.scrollimg');
-      handleBars('template-4', '.ourblogs');
-      handleBars('template-homedark','.homedark');
-      handleBars('template-homelight','.homelight');
-      handleBars('template-showcase','.showcase');
-      handleBars('template-showcaselight','.showcaselight');
-      handleBars('template-page','.page');
-      handleBars('template-porfolio','.porfolio');
-      handleBars('template-blog','.blog');
-      handleBars('template-shop','.shop');
-      handleBars('template-scrollsection','.scrollsection');
-     // handleBars('template-homedark-mb','.homedark');
-
-    </script>
-    
-
+    }
+    handleBars('template-ourservices', '.ourservices');
+    handleBars('template-peoplesays', '.peoplesays');
+    handleBars('template-scrollimg', '.scrollimg');
+    handleBars('template-ourblogs', '.ourblogs');
+    handleBars('template-homedark-light','.homedark-light');
+    handleBars('template-showcase','.showcase');
+    handleBars('template-showcaselight','.showcaselight');
+    handleBars('template-page','.page');
+    handleBars('template-porfolio','.porfolio');
+    handleBars('template-blog','.blog');
+    handleBars('template-shop','.shop');
+    handleBars('template-infiniteRotate','.infiniteRotate');
+    handleBars('template-classicGrid', ".classicGrid");
+    handleBars('template-mansory', '.mansory');
+    handleBars('template-stars', '.stars');
+    handleBars('template-services', '.services');
+  </script> 
   <!-- Header responsive -->
   <script type="module" src="/src/menu-mobile.ts"></script>
-
-  <!-- wowjs 1:sử dụng thuộc tính của thư viện WOW.js để tạo hiệu ứng khi cuộn trang web -->
-  <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
-  <!-- Smoother scroll -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js"></script> -->
-  <!-- Swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- gsap3 -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-  <script type="module" src="/src/main.ts"></script>
-  <!-- <script type="module" src="/src/handlebar.ts"></script> -->
-  <script type="text/javascript">
+  <script>
     // Header
     window.addEventListener("scroll", () => {
       // Header scroll
       var header = document.querySelector("#header")
       header.classList.toggle("sticky", scrollY > 0);
     });
+  </script>
+  <!-- wowjs 1:sử dụng thuộc tính của thư viện WOW.js để tạo hiệu ứng khi cuộn trang web -->
+  <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
+  <script>
+    // wowjs 1
+    var wow = new WOW(
+      {
+        boxClass: 'wow',      // animated element css class (default is wow)
+        animateClass: 'animated', // animation css class (default is animated)
+        offset: 0,          // distance to the element when triggering the animation (default is 0)
+        mobile: true,       // trigger animations on mobile devices (default is true)
+        live: true,       // act on asynchronously loaded content (default is true)
+        callback: function (box) {
+          // the callback is fired every time an animation is started
+          // the argument that is passed in is the DOM node being animated
+        },
+        scrollContainer: null // optional scroll container selector, otherwise use window
+      }
+    );
+    wow.init();
+  </script>
+  <!-- Smoother scroll -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js"></script> -->
+  <!-- Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Add class swiper-wrapper
+    const containerSwiper = document.getElementById("container-swiper-wrapper");
+    const swiperWrapperElement = document.getElementById('oke');
+    // Tạo một hàm để cập nhật giá trị width khi kích thước thay đổi
+    function updateWidth() {
+        let width = containerSwiper.offsetWidth;
+        if (width > 1024) {
+          swiperWrapperElement.classList.add('swiper-wrapper');
+        } else {
+          swiperWrapperElement.classList.remove('swiper-wrapper');
+        }
+    }
+    // Gọi hàm updateWidth ban đầu để lấy giá trị width ban đầu
+    updateWidth();
 
+    // Thêm sự kiện 'resize' vào cửa sổ để cập nhật giá trị width khi kích thước thay đổi
+    window.addEventListener('resize', updateWidth);
+  </script>
+  <!-- gsap3 -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script>
     // gsapjs 3
     const time = {};
     const state = {}; // Cấu trúc dữ liệu để theo dõi trạng thái mở/đóng
@@ -1484,7 +1327,10 @@
 
       });
     });
-
+  </script>
+  <script type="module" src="/src/main.ts"></script>
+  <!-- <script type="module" src="/src/handlebar.ts"></script> -->
+  <script type="text/javascript">
     // Div Follow The Mouse Cursor
     const cursor = document.getElementById('cursor');
     document.addEventListener('mousemove', (e) => {
@@ -1504,25 +1350,6 @@
         cursor.classList.remove('cursor-active');
       })
     });
-
-    // wowjs 1
-    var wow = new WOW(
-      {
-        boxClass: 'wow',      // animated element css class (default is wow)
-        animateClass: 'animated', // animation css class (default is animated)
-        offset: 0,          // distance to the element when triggering the animation (default is 0)
-        mobile: true,       // trigger animations on mobile devices (default is true)
-        live: true,       // act on asynchronously loaded content (default is true)
-        callback: function (box) {
-          // the callback is fired every time an animation is started
-          // the argument that is passed in is the DOM node being animated
-        },
-        scrollContainer: null // optional scroll container selector, otherwise use window
-      }
-    );
-    wow.init();
-
-
   </script>
 </body>
 
