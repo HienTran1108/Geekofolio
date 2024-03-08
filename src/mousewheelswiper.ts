@@ -7,5 +7,6 @@ export const mousewheelSwiper = new Swiper(".mousewheelSwiper", {
     on: {
         init: (el: any) => animationSlide(el.slides[el.activeIndex], 0),
         slideChangeTransitionStart: (el: any) => animationSlide(el.slides[el.activeIndex], 0),
-      },
-  });
+    },
+});
+mousewheelSwiper.init();
