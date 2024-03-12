@@ -5,19 +5,19 @@ swiper.init();
 import { wow } from './wow';
 wow.init();
 
-import { mousewheelSwiper } from './mousewheelswiper';
 // Add class swiper-wrapper
 const containerSwiper = document.getElementById("container-swiper-wrapper");
 const swiperWrapperElement = document.getElementById('oke');
-console.log(swiperWrapperElement)
 // Tạo một hàm để cập nhật giá trị width khi kích thước thay đổi
 function updateWidth() {
   let width = containerSwiper!.offsetWidth;
   console.log(width)
   if (width > 1024) {
     swiperWrapperElement!.classList.add('swiper-wrapper');
+    containerSwiper?.classList.add('mousewheelSwiper');
   } else {
     swiperWrapperElement!.classList.remove('swiper-wrapper');
+    containerSwiper?.classList.remove('mousewheelSwiper');
   }
 }
 // Gọi hàm updateWidth ban đầu để lấy giá trị width ban đầu

@@ -10,4 +10,7 @@ export const swiper = new Swiper(".mySwiper", {
     nextEl: ".button-next",
     prevEl: ".button-prev",
   },
+  autoplay: {
+    delay: 5000,
+  },
 });
