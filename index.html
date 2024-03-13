@@ -18,12 +18,16 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- wow 1-->
   <link href="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css" rel="stylesheet">
+  <!-- Glightbox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
 </head>
+
+<!-- https://ui-themez.smartinnovates.net/items/geekfolio/light/home-main.html# -->
 
 <body class="font-epilogue box-border">
 
   <div id="cursor"
-    class="fixed z-50 p-1.5 bg-black rounded-full pointer-events-none transition-transform duration-300 ease-in">
+    class="fixed z-50 p-1.5 bg-white mix-blend-difference rounded-full pointer-events-none transition-transform duration-300 ease-in">
   </div>
 
   <!-- Header -->
@@ -475,7 +479,7 @@
                   </div>
                   <div class="mt-8 w-full h-12">
                     <a href="https://www.youtube.com/watch?v=AzwC6umvd1s&feature=youtu.be"
-                      class="relative flex w-32 h-full border border-gray-900 rounded-full pl-4 pr-10 items-center justify-center cursor-pointer">
+                      class="glightbox relative flex w-32 h-full border border-gray-900 rounded-full pl-4 pr-10 items-center justify-center cursor-pointer">
                       <span class="text-base font-light text-gray-500 bg-transparent mr-1">WATCH</span>
                       <span
                         class="w-11 h-11 rounded-full bg-yellow-500 absolute right-0.5 flex items-center justify-center">
@@ -691,17 +695,17 @@
       </div>
     </section>
     <!-- Scroll section image -->
-    <section class="pb-10 lg:pb-0 font-epilogue">
-      <div id="container-swiper-wrapper" class="scrollimg max-w-full lg:flex lg:flex-nowrap px-5 md:px-8 lg:px-28 mousewheelSwiper">
-        <script id="template-scrollimg" type="text/x-handlebars-template">
-          <div id="oke" class="lg:flex w-full">
+    <section id="horizontal">
+      <div class="px-8 lg:px-20 xl:px-28">
+        <div class="w-full lg:w-max lg:flex scrollimg">
+          <script id="template-scrollimg" type="text/x-handlebars-template">
             {{#scrollimg}}
-            <div class="cursor-pointer mb-10 lg:mb-0 lg:mr-20 xl:mr-28 swiper-slide xl:max-w-2xl lg:max-w-md lg:max-h-96">
+            <div class="horizontal__item mb-16 lg:-mr-44 xl:-mr-4">
               <div class="w-full">
                 <img src="{{src}}" alt="1"
-                  class="w-full h-full object-contain">
-                 </div>
-              <div class="flex justify-between">
+                  class="w-full object-cover lg:w-8/12 xl:w-10/12">
+                </div>
+              <div class="flex justify-between w-full lg:w-8/12 xl:w-10/12">
                 <div class="leading-relaxed">
                   <span class="text-base font-medium mt-6 inline-block text-gray-500">{{span}}</span>
                   <h5 class="text-2xl font-semibold">{{h5}}</h5>
@@ -712,15 +716,15 @@
               </div>
             </div>
             {{/scrollimg}}
-          </div>
-        </script>
+          </script>
+        </div>
       </div>
     </section>
     <!-- infinite label -->
     <section class="pb-36 pt-10 font-epilogue">
       <div class="px-9 sm:px-14 md:px-28 xl:px-28">
         <!-- infinity roll -->
-        <div class="max-h-40 py-10 border-y bg-inherit border-gray-300 overflow-hidden mb-20 xl:mt-32">
+        <div class="max-h-40 py-10 border-y bg-inherit border-gray-300 overflow-hidden mb-20">
           <div class="flex max-h-14 items-center px-4">
             <div class="flex flex-nowrap items-center justify-between animate-infinitescroll">
               <div class="flex items-center justify-center px-8 text-nowrap">
@@ -1054,7 +1058,7 @@
   </div>
 
   <!-- footer -->
-  <div class="mt-24 sm:px-20 md:px-8">
+  <div class="bg-white mt-24 sm:px-20 md:px-8">
     <div class="md:mx-8 mb-12 px-3 epilogue-font">
       <div
         class="md:flex text-center text-4xl lg:text-7xl font-bold items-center justify-center border rounded-xl p-5 mb-20">
@@ -1114,16 +1118,26 @@
     </div>
   </div>
   
-  <!-- handlebars 4 -->
-  <script src="https://cdn.jsdelivr.net/npm/handlebars@4/dist/handlebars.js"></script>
+  
+
+
+  
   <!-- wowjs 1:sử dụng thuộc tính của thư viện WOW.js để tạo hiệu ứng khi cuộn trang web -->
   <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
   <!-- Smoother scroll -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js"></script> -->
   <!-- Swiper -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+  <!--  Glightboxjs: thư viện hộp đèn cho phép bạn tạo các phòng trưng bày hình ảnh đơn giản, video, iframe và các yếu tố nội tuyến  -->
+  <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+  <!-- handlebars 4 -->
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@4/dist/handlebars.js"></script>
   <!-- gsap3 -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <!-- ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
 
   <!-- handlebars 4 -->
   <script type="module" src="/src/handlebar.ts"></script>
@@ -1131,6 +1145,8 @@
   <script type="module" src="/src/menu-mobile.ts"></script>
   <script type="module" src="/src/main.ts"></script>
   <script type="module" src="/src/mousewheelswiper.ts"></script>
+  
+  
 </body>
 
 </html>

@@ -6,25 +6,25 @@ import { wow } from './wow';
 wow.init();
 
 // Add class swiper-wrapper
-const containerSwiper = document.getElementById("container-swiper-wrapper");
-const swiperWrapperElement = document.getElementById('oke');
-// Tạo một hàm để cập nhật giá trị width khi kích thước thay đổi
-function updateWidth() {
-  let width = containerSwiper!.offsetWidth;
-  console.log(width)
-  if (width > 1024) {
-    swiperWrapperElement!.classList.add('swiper-wrapper');
-    containerSwiper?.classList.add('mousewheelSwiper');
-  } else {
-    swiperWrapperElement!.classList.remove('swiper-wrapper');
-    containerSwiper?.classList.remove('mousewheelSwiper');
-  }
-}
-// Gọi hàm updateWidth ban đầu để lấy giá trị width ban đầu
-updateWidth();
+// const containerSwiper = document.getElementById("container-swiper-wrapper");
+// const swiperWrapperElement = document.getElementById('oke');
+// // Tạo một hàm để cập nhật giá trị width khi kích thước thay đổi
+// function updateWidth() {
+//   let width = containerSwiper!.offsetWidth;
+//   console.log(width)
+//   if (width > 1024) {
+//     swiperWrapperElement!.classList.add('swiper-wrapper');
+//     containerSwiper?.classList.add('mousewheelSwiper');
+//   } else {
+//     swiperWrapperElement!.classList.remove('swiper-wrapper');
+//     containerSwiper?.classList.remove('mousewheelSwiper');
+//   }
+// }
+// // Gọi hàm updateWidth ban đầu để lấy giá trị width ban đầu
+// updateWidth();
 
-// Thêm sự kiện 'resize' vào cửa sổ để cập nhật giá trị width khi kích thước thay đổi
-window.addEventListener('resize', updateWidth);
+// // Thêm sự kiện 'resize' vào cửa sổ để cập nhật giá trị width khi kích thước thay đổi
+// window.addEventListener('resize', updateWidth);
 
 
 // mousewheelSwiper.init();
@@ -95,3 +95,47 @@ document.querySelectorAll('a').forEach((tagA) => {
     cursor!.classList.remove('cursor-active');
   })
 });
+
+// GLightboxjs 3
+const glightbox = GLightbox({
+  touchNavigation: false,
+  loop: false,
+  autoplayVideos: true,  
+});
+glightbox.init();
+
+// Smoother
+// gsap.registerPlugin(ScrollSmoother) 
+
+// const scrollSmoother = ScrollSmoother.create({
+//   smooth: 1,
+//   effects: true,
+// });
+// scrollSmoother.init();
+
+// ScrollTrigger
+const section_2 = document.getElementById("horizontal");
+let box_items = gsap.utils.toArray(".horizontal__item");
+// Tạo một hàm để cập nhật giá trị width khi kích thước thay đổi
+function updateWidth() {
+  let width = section_2!.offsetWidth;
+  console.log(width)
+  if (width > 1024) {
+    gsap.to(box_items, {
+    xPercent: -100 * (box_items.length - 1),
+    duration: 1,
+    scrollTrigger: {
+      trigger: section_2,
+      pin: true,
+      scrub: 1,
+      snap: 1 / (box_items.length - 1),
+      end: "+=" + section_2!.offsetWidth
+    }
+  });
+  } 
+}
+// Gọi hàm updateWidth ban đầu để lấy giá trị width ban đầu
+updateWidth();
+
+// Thêm sự kiện 'resize' vào cửa sổ để cập nhật giá trị width khi kích thước thay đổi
+window.addEventListener('resize', updateWidth);
