@@ -27,8 +27,6 @@ wow.init();
 // window.addEventListener('resize', updateWidth);
 
 
-// mousewheelSwiper.init();
-
 // gsapjs 3
 const time:any = {};
 const state:any = {};
